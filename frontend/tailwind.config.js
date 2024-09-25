@@ -13,6 +13,10 @@ export default {
         vazir: "vazir",
         lale: "lalezar",
       },
+      colors: {
+        customBg: 'rgb(241, 241, 241)',
+        'customBg-dark': 'rgba(39, 39, 42, 1)',
+      },
     },
   },
   darkMode: "class",
