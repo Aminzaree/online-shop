@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   return (
     <div className='bg-customBg'>
-      سلام دنیا
+      hello world!
     </div>
   );
 };
