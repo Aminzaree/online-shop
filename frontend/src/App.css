@@ -11,24 +11,59 @@
       url(./assets/fonts/lalezar/Lalezar-Regular.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'ravi';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fonts/ravi/Ravi-Thin.woff') format('woff'),
+      url('./assets/fonts/ravi/Ravi-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ravi';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/ravi/Ravi-Light.woff') format('woff'),
+      url('./assets/fonts/ravi/Ravi-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ravi';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/ravi/Ravi-Medium.woff') format('woff'),
+      url('./assets/fonts/ravi/Ravi-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ravi';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/ravi/Ravi-SemiBold.woff') format('woff'),
+      url('./assets/fonts/ravi/Ravi-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ravi';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/ravi/Ravi-ExtraBold.woff') format('woff'),
+      url('./assets/fonts/ravi/Ravi-ExtraBold.woff2') format('woff2');
+}
+
 html {
   direction: rtl;
 }
 
 body{
-  font-family: vazir;
+  @apply bg-customBg;
+  font-family: ravi;
 }
 
 .font-lale {
     font-family: lalezar;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
+.font-ravi {
+  font-family: ravi;
 }
