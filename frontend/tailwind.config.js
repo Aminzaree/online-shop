@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         vazir: "vazir",
         lale: "lalezar",
+        ravi: "ravi"
       },
       colors: {
         customBg: 'rgb(241, 241, 241)',
