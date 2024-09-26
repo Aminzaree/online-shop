@@ -18,7 +18,7 @@ export default function App() {
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
             maxWidth="xl"
-            className="sm:py-7"
+            className="sm:py-7 rounded-b-3xl"
         >
             {/* Navbar Image Logo */}
             <img
@@ -32,8 +32,9 @@ export default function App() {
             <div className="w-full flex flex-col">
                 {/* Top Items */}
                 <NavbarContent className="hidden sm:flex sm:pb-4">
-                    <NavbarContent className="w-1/2">
+                    <NavbarContent>
                         <Input
+                            isClearable
                             type="search"
                             variant="bordered"
                             className="w-full"
@@ -51,7 +52,7 @@ export default function App() {
                             radius="sm"
                         >
                             <LuUser2 size={18} />
-                            <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
+                            <NavLink to="/signUp" className="flex" > ورود / عضویت</NavLink>
                         </Button>
                         <Button
                             isIconOnly
@@ -79,7 +80,7 @@ export default function App() {
                             className="sm:hidden"
                         />
                         <NavbarBrand>
-                            <p className="font-bold text-inherit text-red-600">فروشگاه من</p>
+                            <p className="font-lale text-xl font-bold text-inherit text-red-600">فروشگاه من</p>
                             <NavbarContent className="hidden sm:flex gap-4 mr-4" justify="center">
                                 <NavbarItem>
                                     <NavLink to='/' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
