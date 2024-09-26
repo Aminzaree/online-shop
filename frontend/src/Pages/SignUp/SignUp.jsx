@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Input, Button, Checkbox } from "@nextui-org/react"
 import { useForm } from "react-hook-form";
+import { Input, Button, Checkbox } from "@nextui-org/react"
 import { FaUserPlus, FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import PasswordStrengthProgress from "./PasswordStrengthProgress";
