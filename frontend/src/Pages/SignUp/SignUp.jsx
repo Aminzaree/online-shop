@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 import PasswordStrengthProgress from "./PasswordStrengthProgress";
 import { VscError } from "react-icons/vsc";
 import { MdMobileFriendly } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SignUp() {
 
@@ -18,6 +20,7 @@ export default function SignUp() {
     const onSubmit = (data) => {
         alert("Hello World");
     };
+
     
     const handleError = () => {
         if (Object.keys(errors).length > 0) {

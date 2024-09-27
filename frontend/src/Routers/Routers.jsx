@@ -6,6 +6,7 @@ import Home from './../Pages/Home/Home'
 import Product from './../Pages/Product/Product'
 import About from './../Pages/About/About'
 import Error from "../Pages/Error/Error";
+import { ToastContainer } from "react-toastify";
 
 export default function Routers() {
 
@@ -23,41 +24,44 @@ export default function Routers() {
 
 
     return (
-        <BrowserRouter>
-            <Routes>
+        <>
+            <BrowserRouter>
+                <Routes>
 
-                {/* مسیرهای بدون SharedLayout */}
-                {
-                    routes.map((route, index) => {
-                        const { path, element } = route;
-                        return (
-                            <Route 
-                                key={index} 
-                                path={path} 
-                                element={element} 
-                            />
-                        )
-                    })
-                }
-
-                {/* مسیرهای با SharedLayout */}
-                <Route path="/" element={<LayoutMain />}>
+                    {/* مسیرهای بدون SharedLayout */}
                     {
-                        sharedLayoutRoutes.map((route, index) => {
+                        routes.map((route, index) => {
                             const { path, element } = route;
                             return (
-                                <Route 
-                                    key={index} 
-                                    path={path} 
-                                    element={element} 
-                                    index={index ? true : false} 
+                                <Route
+                                    key={index}
+                                    path={path}
+                                    element={element}
                                 />
                             )
                         })
                     }
-                    
-                </Route>
-            </Routes>
-        </BrowserRouter>
+
+                    {/* مسیرهای با SharedLayout */}
+                    <Route path="/" element={<LayoutMain />}>
+                        {
+                            sharedLayoutRoutes.map((route, index) => {
+                                const { path, element } = route;
+                                return (
+                                    <Route
+                                        key={index}
+                                        path={path}
+                                        element={element}
+                                        index={index ? true : false}
+                                    />
+                                )
+                            })
+                        }
+
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+            <ToastContainer rtl position='bottom-right' />
+        </>
     );
 };
