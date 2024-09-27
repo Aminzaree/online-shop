@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, Input } from "@nextui-org/react";
 import { ToastContainer, toast } from 'react-toastify';
-import { FaShoppingBasket, FaRegSun, FaSearch } from "react-icons/fa";
+import { FaShoppingBasket, FaSearch } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { LuUser2 } from "react-icons/lu";
 import onlineShop from "./../../assets/img/online-store.png"
 import Cookies from "js-cookie";
+import DarkModeToggle from "../../Components/Dark Mode Toggle/DarkModeToggle";
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,13 +63,7 @@ export default function App() {
                         >
                             <FaShoppingBasket size={25} />
                         </Button>
-                        <Button
-                            isIconOnly
-                            color="transparent"
-                            radius="sm"
-                        >
-                            <FaRegSun size={25} />
-                        </Button>
+                        <DarkModeToggle />
                     </NavbarContent>
                 </NavbarContent>
 
