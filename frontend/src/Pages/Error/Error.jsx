@@ -1,5 +1,5 @@
 export default function Error () {
     return (
-        <>error</>
+        <div>404 Page Not Found</div>
     )
 }
