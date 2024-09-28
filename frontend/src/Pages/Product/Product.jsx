@@ -1,5 +1,7 @@
 export default function Index () {
     return (
-        <>Product page</>
+        <div>
+            Product page
+        </div>
     );
 };

@@ -1,0 +1,12 @@
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\bin\Debug\net8.0\OnlineShop.Application.deps.json
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\bin\Debug\net8.0\OnlineShop.Application.dll
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\bin\Debug\net8.0\OnlineShop.Application.pdb
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.AssemblyInfoInputs.cache
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.AssemblyInfo.cs
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.csproj.CoreCompileInputs.cache
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.sourcelink.json
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.dll
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\refint\OnlineShop.Application.dll
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\OnlineShop.Application.pdb
+C:\Users\Amin Zare\Desktop\New folder\online-shop\backend\OnlineShop.Application\obj\Debug\net8.0\ref\OnlineShop.Application.dll
