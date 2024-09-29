@@ -8,6 +8,9 @@ import { VscError } from "react-icons/vsc";
 import { MdMobileFriendly } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDisclosure } from "@nextui-org/react";
+import Terms from "./Terms";
+
 
 export default function SignUp() {
 
@@ -21,7 +24,7 @@ export default function SignUp() {
         alert("Hello World");
     };
 
-    
+
     const handleError = () => {
         if (Object.keys(errors).length > 0) {
             setIsInvalid(true);
@@ -29,8 +32,10 @@ export default function SignUp() {
             setIsInvalid(false);
         };
     };
-    
+
     const toggleVisibility = () => setIsVisiblePassword(!isVisiblePassword);
+
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     return (
         <div className="w-full h-screen flex justify-center items-center mx-auto px-4 md:px-0">
@@ -141,7 +146,7 @@ export default function SignUp() {
                             </div>
                             <div className="w-full flex text-start mt-4">
                                 <Checkbox defaultSelected color="default"></Checkbox>
-                                <span className="text-blue-400 hover:text-blue-500 ml-1 cursor-pointer">قوانین</span>
+                                <span onClick={onOpen} className="text-blue-400 hover:text-blue-500 ml-1 cursor-pointer">قوانین</span>
                                 <p className="cursor-pointer text-sm text-zinc-500">استفاده از فروشگاه شما را می‌پذیرم.
                                 </p>
                             </div>
@@ -164,6 +169,10 @@ export default function SignUp() {
                     </div>
                 </div>
             </div>
+
+
+            {/* Terms Modal */}
+            <Terms isOpen={isOpen} onOpenChange={onOpenChange} />
         </div>
     );
 };
