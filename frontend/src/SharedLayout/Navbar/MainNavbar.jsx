@@ -53,7 +53,7 @@ export default function App() {
                             radius="sm"
                         >
                             <LuUser2 size={18} />
-                            <NavLink to="/signUp" className="flex" > ورود / عضویت</NavLink>
+                            <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
                         </Button>
                         <Button
                             isIconOnly

@@ -38,7 +38,7 @@ export default function SignUp() {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     return (
-        <div className="w-full h-screen flex justify-center items-center mx-auto px-4 md:px-0">
+        <div className="w-full h-screen flex flex-col justify-center items-center mx-auto px-4 md:px-0">
             <div className="w-full md:w-8/12 lg:w-7/12 xl:w-5/12 mx-auto text-center py-8 p-4 bg-white dark:bg-[#18181B] rounded-3xl">
                 <div className="w-11/12 md:w-8/12 mx-auto">
                     <div className="w-full">
@@ -88,7 +88,7 @@ export default function SignUp() {
                                 </label>
                                 {
                                     errors.email &&
-                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="mr-1" size={15} />{errors.email.message}</p>
+                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.email.message}</p>
                                 }
                             </div>
                             <div className="w-full mt-4 relative">
@@ -116,7 +116,7 @@ export default function SignUp() {
                                 </label>
                                 {
                                     errors.password &&
-                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="mr-1" size={15} />{errors.password.message}</p>
+                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.password.message}</p>
                                 }
                                 <div>
                                     <PasswordStrengthProgress checkPassword={checkPassword} />
@@ -141,7 +141,7 @@ export default function SignUp() {
                                 </label>
                                 {
                                     errors.confirmPassword &&
-                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="mr-1" size={15} />{errors.confirmPassword.message}</p>
+                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.confirmPassword.message}</p>
                                 }
                             </div>
                             <div className="w-full flex text-start mt-4">
@@ -173,6 +173,7 @@ export default function SignUp() {
 
             {/* Terms Modal */}
             <Terms isOpen={isOpen} onOpenChange={onOpenChange} />
+            <p className="text-xs mt-2 text-zinc-300">کلیه حقوق این وبسایت متعلق به تیم توسعه و طراحی ما می‌باشد. کپی نکن !</p>
         </div>
     );
 };
