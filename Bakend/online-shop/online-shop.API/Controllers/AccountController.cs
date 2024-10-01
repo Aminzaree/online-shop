@@ -7,9 +7,15 @@ namespace online_shop.API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public IActionResult Login()
+        {
+            return Ok("تست");
+        }
+        [HttpPost]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public IActionResult Register()
         {
             return Ok("تست");
         }
