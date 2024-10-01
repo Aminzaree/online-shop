@@ -16,7 +16,7 @@ export default function SignIn() {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
 
     const onSubmit = (data) => {
-        console.log("hello world")
+        console.log("hello world");
     }
 
     const handleError = () => {
