@@ -1,3 +1,0 @@
-"ConnectionStrings": {
-    "DatingConnectionStrings": "Server=myServerAddress;Database=myDataBase;UserId=myUsername;Password=myPassword;MultipleActiveResultSets=True;TrustServerCertificate=True"
-  },
