@@ -7,12 +7,14 @@ import Product from './../Pages/Product/Product'
 import About from './../Pages/About/About'
 import Error from "../Pages/Error/Error";
 import { ToastContainer } from "react-toastify";
+import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 
 export default function Routers() {
 
     const routes = [
         { path: '/signUp', element: <SignUp /> },
         { path: '/signIn', element: <SignIn /> },
+        { path: '/forgetPassword', element: <ForgetPassword /> },
     ];
 
     const sharedLayoutRoutes = [

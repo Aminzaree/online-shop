@@ -33,7 +33,7 @@ export default function DarkModeToggle() {
             color="transparent"
             radius="sm"
         >
-            {darkMode ? <FaRegSun size={25} /> : <FaRegMoon size={25} />}
+            {darkMode ? <FaRegMoon size={25} /> : <FaRegSun size={25} />}
         </Button>
     );
 };
