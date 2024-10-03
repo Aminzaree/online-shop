@@ -33,38 +33,43 @@ export default function App() {
             <div className="w-full flex flex-col">
                 {/* Top Items */}
                 <NavbarContent className="hidden sm:flex sm:pb-4">
-                    <NavbarContent>
-                        <Input
-                            isClearable
-                            type="search"
-                            variant="bordered"
-                            className="w-full"
-                            radius="sm"
-                            placeholder="جستجو"
-                            startContent={
-                                <FaSearch className="text-xl text-default-400 pointer-events-none flex-shrink-0" />
-                            }
-                        />
-                    </NavbarContent>
-                    <NavbarContent justify="end">
-                        <Button
-                            color="default"
-                            variant="bordered"
-                            radius="sm"
-                        >
-                            <LuUser2 size={18} />
-                            <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
-                        </Button>
-                        <Button
-                            isIconOnly
-                            color="default"
-                            variant="bordered"
-                            radius="sm"
-                        >
-                            <FaShoppingBasket size={25} />
-                        </Button>
-                        <DarkModeToggle />
-                    </NavbarContent>
+                    <div className="md:w-8/12 xl:w-9/12">
+                        <NavbarContent className="w-full">
+                            <Input
+                                isClearable
+                                type="search"
+                                variant="bordered"
+                                className="w-full"
+                                radius="sm"
+                                placeholder="جستجو"
+                                startContent={
+                                    <FaSearch className="text-xl text-default-400 pointer-events-none flex-shrink-0" />
+                                }
+                            />
+                        </NavbarContent>
+                    </div>
+                    <div className="md:w-4/12 xl:w-3/12">
+                        <NavbarContent className="w-full" justify="end">
+                            <Button
+                                color="default"
+                                variant="bordered"
+                                radius="sm"
+                            >
+                                <LuUser2 size={18} />
+                                <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
+                            </Button>
+                            <Button
+                                isIconOnly
+                                color="default"
+                                variant="bordered"
+                                radius="sm"
+                            >
+                                <FaShoppingBasket size={25} />
+                            </Button>
+                            <DarkModeToggle />
+                        </NavbarContent>
+                    </div>
+
                 </NavbarContent>
 
                 {/* Bottom Items */}

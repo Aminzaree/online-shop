@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input, Button } from "@nextui-org/react";
 import { MdMobileFriendly } from "react-icons/md";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa"
@@ -26,6 +26,12 @@ export default function SignIn() {
             setIsInvalid(false);
         };
     };
+
+    const navigate = useNavigate();
+
+    const handleForgetPassword = () => {
+        navigate("/forgetPassword", {state: {formSignIn: true}})
+    }
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center mx-auto px-4 md:px-0">
@@ -107,7 +113,7 @@ export default function SignIn() {
                                 }
                             </div>
                             <div className="w-full text-end mt-4">
-                                <span className="cursor-pointer text-sm text-blue-400 hover:text-blue-500">کلمه عبور خود را فراموش کرده‌اید ؟</span>
+                                <span onClick={() => handleForgetPassword()} className="cursor-pointer text-sm text-blue-400 hover:text-blue-500">کلمه عبور خود را فراموش کرده‌اید ؟</span>
                             </div>
                             <div className="w-full mt-7">
                                 <Button
