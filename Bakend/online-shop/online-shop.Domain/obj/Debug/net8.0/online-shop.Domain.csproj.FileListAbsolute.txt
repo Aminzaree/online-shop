@@ -1,0 +1,12 @@
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\bin\Debug\net8.0\online-shop.Domain.deps.json
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\bin\Debug\net8.0\online-shop.Domain.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\bin\Debug\net8.0\online-shop.Domain.pdb
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.AssemblyInfoInputs.cache
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.AssemblyInfo.cs
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.csproj.CoreCompileInputs.cache
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.sourcelink.json
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\refint\online-shop.Domain.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\online-shop.Domain.pdb
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Domain\obj\Debug\net8.0\ref\online-shop.Domain.dll

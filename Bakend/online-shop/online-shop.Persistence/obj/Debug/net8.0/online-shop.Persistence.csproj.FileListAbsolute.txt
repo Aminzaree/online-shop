@@ -1,0 +1,12 @@
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\bin\Debug\net8.0\online-shop.Persistence.deps.json
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\bin\Debug\net8.0\online-shop.Persistence.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\bin\Debug\net8.0\online-shop.Persistence.pdb
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.AssemblyInfoInputs.cache
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.AssemblyInfo.cs
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.csproj.CoreCompileInputs.cache
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.sourcelink.json
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\refint\online-shop.Persistence.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\online-shop.Persistence.pdb
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Persistence\obj\Debug\net8.0\ref\online-shop.Persistence.dll

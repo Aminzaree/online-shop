@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "online-shop.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/online-shop.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/online-shop.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "online-shop.Domain/1.0.0": {
+      "type": "project",
+      "path": "../online-shop.Domain/online-shop.Domain.csproj",
+      "msbuildProject": "../online-shop.Domain/online-shop.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "online-shop.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Nader\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
+              "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "document", "document", "{9FF9B8E1-9270-4D16-B5A5-87B721935464}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\نمونه پروژه\Dating\DatingApp\Document.txt = ..\..\..\..\نمونه پروژه\Dating\DatingApp\Document.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C3B12D9-84AC-4A9F-86FE-112756AABE68}"
 EndProject
@@ -15,11 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DAD30BBF-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A6399866-1946-438B-9DBF-A82D0F005CA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online-shop.Application", "online-shop.Application\online-shop.Application.csproj", "{5CD153FF-61F7-4AC7-84D3-ECCD2AB405D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.Application", "online-shop.Application\online-shop.Application.csproj", "{5CD153FF-61F7-4AC7-84D3-ECCD2AB405D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online-shop.Domain", "online-shop.Domain\online-shop.Domain.csproj", "{9A229547-D362-4259-B866-D6C24E834AD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.Domain", "online-shop.Domain\online-shop.Domain.csproj", "{9A229547-D362-4259-B866-D6C24E834AD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online-shop.API", "online-shop.API\online-shop.API.csproj", "{1E5348E8-9316-43B9-9B45-5A48AD9A365A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.API", "online-shop.API\online-shop.API.csproj", "{1E5348E8-9316-43B9-9B45-5A48AD9A365A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.Persistence", "online-shop.Persistence\online-shop.Persistence.csproj", "{62521F54-4755-4A29-8289-335735E731A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,10 @@ Global
 		{1E5348E8-9316-43B9-9B45-5A48AD9A365A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E5348E8-9316-43B9-9B45-5A48AD9A365A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E5348E8-9316-43B9-9B45-5A48AD9A365A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62521F54-4755-4A29-8289-335735E731A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62521F54-4755-4A29-8289-335735E731A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62521F54-4755-4A29-8289-335735E731A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62521F54-4755-4A29-8289-335735E731A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +59,7 @@ Global
 		{5CD153FF-61F7-4AC7-84D3-ECCD2AB405D2} = {DAD30BBF-B493-4DE5-A579-33FD5415937F}
 		{9A229547-D362-4259-B866-D6C24E834AD4} = {DAD30BBF-B493-4DE5-A579-33FD5415937F}
 		{1E5348E8-9316-43B9-9B45-5A48AD9A365A} = {CF3926B5-CF18-4C33-9B47-968BB57438AB}
+		{62521F54-4755-4A29-8289-335735E731A3} = {A6399866-1946-438B-9DBF-A82D0F005CA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7C673EE-C2BF-4A0B-9474-AD0CED55B601}
