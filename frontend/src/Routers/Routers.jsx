@@ -9,6 +9,7 @@ import Error from "../Pages/Error/Error";
 import { ToastContainer } from "react-toastify";
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SetupNewPassword from "../Pages/SetupNewPassword/SetupNewPassword";
+import Contact from '../Pages/Contact/index'
 
 export default function Routers() {
 
@@ -23,6 +24,7 @@ export default function Routers() {
         { path: '/', element: <Home />, index: true },
         { path: '/product', element: <Product /> },
         { path: '/about', element: <About /> },
+        { path: '/contact', element: <Contact /> },
         { path: '*', element: <Error /> },
     ];
 
