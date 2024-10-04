@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using online_shop.API.Models;
 using online_shop.API.Services.Implementation;
 using online_shop.API.Services.Interface;
+using online_shop.Application.Models;
 using System.Text;
 
 namespace online_shop.API.DependencyContainer

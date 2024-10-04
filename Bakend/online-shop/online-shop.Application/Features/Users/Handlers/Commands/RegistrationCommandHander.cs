@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
+using online_shop.Application.Contracts.Infrastructure;
 using online_shop.Application.Contracts.Persistence;
 using online_shop.Application.DTOs.Account.Validators;
 using online_shop.Application.Features.Users.Requests.Commands;
+using online_shop.Application.Models.Email;
 using online_shop.Application.Responses;
 using online_shop.Application.Utilities.Generator;
 using online_shop.Application.Utilities.Security.PasswordHelper;
@@ -15,12 +17,14 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IPasswordHelper _passwordHelper;
+        private readonly IEmailSender _emailSender;
 
-        public RegistrationCommandHander(IUserRepository userRepository, IMapper mapper, IPasswordHelper passwordHelper = null)
+        public RegistrationCommandHander(IUserRepository userRepository, IMapper mapper, IPasswordHelper passwordHelper = null, IEmailSender emailSender = null)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _passwordHelper = passwordHelper;
+            _emailSender = emailSender;
         }
 
         public async Task<BaseCommandResponse> Handle(RegistrationCommand request, CancellationToken cancellationToken)
@@ -47,8 +51,14 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
                     response.Message = "حساب کاربری با موفقعیت ساخت شد";
                     response.Id = register.Id;
 
-                    //ToDo Send Email
-
+                    string body = $"<html lang='en'><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body>   <h>خوش آمدید<span style=\"color: chocolate;\">{register.UserName}</span></h>    <button type=\"button\" value='{register.ActiveCodeEmail}'>Ok</button></body></html>";
+                    var email = new EmailDTO()
+                    {
+                        Body = body,
+                        Subject = "تایید حساب کاربری",
+                        To = register.Email
+                    };
+                    _emailSender.SendEmailAsync(email);
                 }
                 catch (Exception)
                 {

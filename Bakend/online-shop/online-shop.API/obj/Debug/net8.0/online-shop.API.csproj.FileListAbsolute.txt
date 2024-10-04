@@ -159,3 +159,5 @@ F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\onli
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.API\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.API\bin\Debug\net8.0\online-shop.Infrastructure.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.API\bin\Debug\net8.0\online-shop.Infrastructure.pdb

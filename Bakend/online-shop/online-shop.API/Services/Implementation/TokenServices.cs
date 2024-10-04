@@ -1,7 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
-using online_shop.API.Models;
 using online_shop.API.Services.Interface;
+using online_shop.Application.Models;
 using online_shop.Domain.User;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

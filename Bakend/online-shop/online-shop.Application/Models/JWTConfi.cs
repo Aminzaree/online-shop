@@ -1,4 +1,4 @@
-﻿namespace online_shop.API.Models
+﻿namespace online_shop.Application.Models
 {
     public class JWTConfi
     {

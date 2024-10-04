@@ -1,5 +1,6 @@
 using online_shop.Persistence;
 using online_shop.Application;
+using online_shop.Infrastructure;
 using online_shop.API.DependencyContainer;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigurePersistenceServices(builder.Configuration);
 builder.Services.ConfigureAppilcationServices();
 builder.Services.ConfigureIdentityServices(builder.Configuration);
+builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 
 
 var app = builder.Build();

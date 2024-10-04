@@ -2580,6 +2580,20 @@
           "bin/placeholder/online-shop.Domain.dll": {}
         }
       },
+      "online-shop.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
+          "online-shop.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/online-shop.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/online-shop.Infrastructure.dll": {}
+        }
+      },
       "online-shop.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -6396,6 +6410,11 @@
       "path": "../online-shop.Domain/online-shop.Domain.csproj",
       "msbuildProject": "../online-shop.Domain/online-shop.Domain.csproj"
     },
+    "online-shop.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../online-shop.Infrastructure/online-shop.Infrastructure.csproj",
+      "msbuildProject": "../online-shop.Infrastructure/online-shop.Infrastructure.csproj"
+    },
     "online-shop.Persistence/1.0.0": {
       "type": "project",
       "path": "../online-shop.Persistence/online-shop.Persistence.csproj",
@@ -6411,6 +6430,7 @@
       "System.IdentityModel.Tokens.Jwt >= 8.1.0",
       "online-shop.Application >= 1.0.0",
       "online-shop.Domain >= 1.0.0",
+      "online-shop.Infrastructure >= 1.0.0",
       "online-shop.Persistence >= 1.0.0"
     ]
   },
@@ -6452,6 +6472,9 @@
             },
             "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
               "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
+            },
+            "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj": {
+              "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj"
             },
             "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj": {
               "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj"

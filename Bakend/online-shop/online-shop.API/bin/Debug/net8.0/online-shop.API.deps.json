@@ -15,6 +15,7 @@
           "System.IdentityModel.Tokens.Jwt": "8.1.0",
           "online-shop.Application": "1.0.0",
           "online-shop.Domain": "1.0.0",
+          "online-shop.Infrastructure": "1.0.0",
           "online-shop.Persistence": "1.0.0"
         },
         "runtime": {
@@ -1357,6 +1358,15 @@
           "online-shop.Domain.dll": {}
         }
       },
+      "online-shop.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
+          "online-shop.Application": "1.0.0"
+        },
+        "runtime": {
+          "online-shop.Infrastructure.dll": {}
+        }
+      },
       "online-shop.Persistence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
@@ -2334,6 +2344,11 @@
       "sha512": ""
     },
     "online-shop.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "online-shop.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
