@@ -8,11 +8,12 @@ namespace online_shop.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(k => k.Id);
             builder.Property(u => u.FirstName).HasMaxLength(150);
             builder.Property(u => u.LastName).HasMaxLength(250);
             builder.Property(u => u.FullName).HasMaxLength(450);
-            builder.Property(u => u.PasswordHash).HasMaxLength(250);
+            builder.Property(u => u.Password)
+                .HasColumnName("PasswordHash").HasMaxLength(250);
             builder.Property(u => u.Email).HasMaxLength(350);
             builder.Property(u => u.Mobile).HasMaxLength(11);
             builder.Property(u => u.ActiveCodeMobile).HasMaxLength(10);
@@ -23,9 +24,10 @@ namespace online_shop.Persistence.Configurations.Entities
                 .HasMaxLength(350);
             builder.Property(u => u.FullName)
                 .HasComputedColumnSql("[FirstName]+' '+[LastName]");
+            builder.Property(b => b.CreatedBy).IsRequired().HasMaxLength(250);
+            builder.Property(b => b.LastModifiedBy).HasMaxLength(250);
 
-            builder.Property(u => u.CreatedBy).HasMaxLength(350);
-            builder.Property(u => u.LastModifiedBy).HasMaxLength(350);
+
         }
     }
 }

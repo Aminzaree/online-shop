@@ -10,3 +10,7 @@ F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\onli
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\obj\Debug\net8.0\refint\online-shop.Application.dll
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\obj\Debug\net8.0\online-shop.Application.pdb
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\obj\Debug\net8.0\ref\online-shop.Application.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\bin\Debug\net8.0\online-shop.Domain.dll
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\bin\Debug\net8.0\online-shop.Domain.pdb
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\obj\Debug\net8.0\online-shop.Application.csproj.AssemblyReference.cache
+F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Application\obj\Debug\net8.0\online-s.2EDFAC5C.Up2Date

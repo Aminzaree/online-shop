@@ -1,11 +1,22 @@
+using online_shop.Persistence;
+using online_shop.Application;
+using online_shop.API.DependencyContainer;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(op =>
+{
+    op.ReturnHttpNotAcceptable = true;
+}).AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.ConfigurePersistenceServices(builder.Configuration);
+builder.Services.ConfigureAppilcationServices();
+builder.Services.ConfigureIdentityServices(builder.Configuration);
+
 
 var app = builder.Build();
 

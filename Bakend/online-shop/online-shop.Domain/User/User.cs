@@ -10,7 +10,7 @@ namespace online_shop.Domain.User
         public required string Email { get; set; }
         public required string UserName { get; set; }
 
-        public required string PasswordHash { get; set; }
+        public required string Password { get; set; }
 
         public string? FirstName { get; set; }
 
@@ -24,13 +24,15 @@ namespace online_shop.Domain.User
 
         public string? ActiveCodeEmail { get; set; }
 
-        public required string Mobile { get; set; }
+        public string? Mobile { get; set; }
 
         public bool IsMobileActive { get; set; }
 
         public string? ActiveCodeMobile { get; set; }
 
         public bool IsBlocked { get; set; }
+
+        public bool IsActive { get; set; }
 
         public int Balance { get; set; }
         

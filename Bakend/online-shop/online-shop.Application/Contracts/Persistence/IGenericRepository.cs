@@ -6,12 +6,13 @@ namespace online_shop.Application.Contracts.Persistence
     {
         IQueryable<TEntity> Queries();
         Task<TEntity> GetByIdAsync(Guid id);
-        Task AddAsync(TEntity entity);
+        Task<TEntity> AddAsync(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
         Task DeleteAsync(Guid id);
         void DeletePermanent(TEntity entity);
         Task DeletePermanentAsync(Guid id);
         Task SaveChangeAsync();
+        int SaveChange();
     }
 }

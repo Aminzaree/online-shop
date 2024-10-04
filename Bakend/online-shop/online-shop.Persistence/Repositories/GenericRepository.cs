@@ -23,14 +23,17 @@ namespace online_shop.Persistence.Repositories
         public async Task<TEntity> GetByIdAsync(Guid id) 
             => await _dbSet.FirstOrDefaultAsync(t => t.Id == id);        
 
-        public async Task AddAsync(TEntity entity)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
-           await _dbSet.AddAsync(entity);
+            await _dbSet.AddAsync(entity);
+            await SaveChangeAsync();
+            return entity;
         }
 
         public void Update(TEntity entity)
         {
             _dbSet.Update(entity);
+             SaveChange();
         }
 
         public void Delete(TEntity entity)
@@ -49,6 +52,7 @@ namespace online_shop.Persistence.Repositories
         public void DeletePermanent(TEntity entity)
         {
             _dbSet.Remove(entity);
+            SaveChange();
         }
 
         public async Task DeletePermanentAsync(Guid id)
@@ -63,7 +67,10 @@ namespace online_shop.Persistence.Repositories
         {
             await _context.SaveChangesAsync();
         }
-
+        public int SaveChange()
+        {
+            return _context.SaveChanges();
+        }
         public async ValueTask DisposeAsync()
         {
            if(_context is not null)

@@ -8,7 +8,7 @@ namespace online_shop.Persistence
 {
     public static class PersistenceServicesRegistration
     {
-        public static IServiceCollection CofigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
 
             services.AddDbContext<OnlineShopDbContext>(options =>
@@ -17,6 +17,7 @@ namespace online_shop.Persistence
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUserRepository, UserRepository>();
 
 
 

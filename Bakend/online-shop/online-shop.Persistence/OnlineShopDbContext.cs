@@ -29,7 +29,7 @@ namespace online_shop.Persistence
 
             foreach (var relationShip in modelBuilder.Model.GetEntityTypes().SelectMany(s=>s.GetForeignKeys()))
             {
-                relationShip.DeleteBehavior= DeleteBehavior.Cascade
+                relationShip.DeleteBehavior = DeleteBehavior.Cascade;
             }
 
             base.OnModelCreating(modelBuilder);
