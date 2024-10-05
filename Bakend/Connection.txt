@@ -1,4 +1,0 @@
-"ConnectionStrings": {
-    "OnlineShopConnectionStrings": "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;MultipleActiveResultSets=True;TrustServerCertificate=True"    
-  },
- // appsettings.development.json
