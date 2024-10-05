@@ -20,7 +20,7 @@ namespace online_shop.Persistence.Configurations.Entities
             builder.Property(u => u.ActiveCodeEmail).HasMaxLength(250);
             builder.Property(u => u.Avatar).HasMaxLength(50);
             builder.Property(u => u.UserName)
-                .HasComputedColumnSql("LEFT(Email, CHARINDEX('@', Email) - 1)",false)
+                //.HasComputedColumnSql("LEFT(Email, CHARINDEX('@', Email) - 1)",false)
                 .HasMaxLength(350);
             builder.Property(u => u.FullName)
                 .HasComputedColumnSql("[FirstName]+' '+[LastName]");

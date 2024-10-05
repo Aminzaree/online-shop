@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /TemplateShop.Api/appsettings.Development.json
 /TemplateShop.Persistence/Migrations
+/Bakend/online-shop.Persistence/Migrations
+/Bakend/online-shop.API/appsettings.development.json

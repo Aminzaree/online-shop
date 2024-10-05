@@ -1,0 +1,73 @@
+﻿@using Microsoft.Extensions.Options
+@using online_shop.API.Utilities
+@using online_shop.Domain.User
+@inject IOptions<AppSetting> _appSetting;
+@model User
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lalezar" rel="stylesheet">
+    <title>فروشگاه | تایید ایمیل</title>
+
+</head>
+
+<!-- Start Body -->
+<body style="direction: rtl; box-sizing: border-box; font-weight: 500; font-family: Vazirmatn;">
+    <!-- Main Card -->
+    <section style="width: 100%; padding: 40px 0; display: flex; align-items: center; justify-content: center; border-radius: 15px; box-sizing: border-box; padding: 0; margin: 0;">
+        <div style="width: 90%; margin: 0 auto; padding: 0 15px;">
+            <div style="display: flex; justify-content: center; margin-left: -15px; margin-right: -15px;">
+                <div style="flex: 0 0 41.666667%; width: 41.666667%;">
+                    <div class="mainCard" style="width: 100%; border-radius: 15px; ">
+                        <div>
+                            <!-- Card Header -->
+                            <div style="width: 100%; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; width: 100%; background-color: #AEE7E8; border-radius: 15px 15px 0 0; background: url('https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg'); background-repeat: no-repeat; background-size: cover;">
+                                <div class="cardHeader" style="width: 100%; text-align: center; padding: 25px 8px;">
+                                    <h1 style="font-family: Lalezar; color: #fff; font-size: 45px; animation: zoom-in-zoom-out 2s ease-out infinite; margin: 0;">فروشگــــــاه</h1>
+                                    <h3 style="font-family: Vazirmatn; padding-top: 15px; color: #e1e1e1; margin: 0;">تـاییـد ایمیل شمـا</h3>
+                                </div>
+                            </div>
+                            <!-- Card Main -->
+                            <div style="width: 100%; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; width: 100%; background-color: #fff; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;">
+                                <div class="cardMain" style="width: 100%; background-color: #fff; padding: 20px 27px; box-sizing: border-box;">
+                                    <div class="inputBox" style="width: 100%;">
+                                        <label style="font-family: Vazirmatn; font-size: 15px;">سلام</label>
+                                        <span style="font-family: Vazirmatn; font-size: 15px; color: #28C3D4;">@Model.UserName</span>
+                                        <span style="font-family: Vazirmatn; font-size: 15px;">عزیز،</span>
+                                    </div>
+                                    <div class="cardContent" style="text-align: center;">
+                                        <p style="font-family: Vazirmatn; font-size: 13px; text-align: start; padding-top: 15px; line-height: 28px; text-align: justify;">از اینکه فروشگاه ما را برای خرید انتخاب کردید، صمیمانه از شما سپاسگزاریم! ما مفتخریم که همراه شما باشیم و هدف ما این است که تجربه خریدی لذت‌بخش و رضایت‌بخش برای شما فراهم کنیم. برای فعال‌سازی حساب کاربری خود و دسترسی کامل به امکانات فروشگاه، لطفاً روی دکمه زیر کلیک کنید:</p>
+                                        <a href="@_appSetting.Value.BaseUrlUI\verifyAccount?code=@Model.ActiveCodeEmail" class="verifyBtn" style="text-decoration: none; font-family: Vazirmatn; margin-top: 15px; padding: 5px 13px; border: none; border-radius: 5px; width: 160px; color: #fff; border: 2px solid #28C3D4; cursor: pointer; font-weight: 600; background-color: #28C3D4;">حسابم را تایید کن</a>
+                                        <p style="font-family: Vazirmatn; font-size: 13px; text-align: start; padding-top: 15px;">اگر لینک بالا مشکل دارد، لطفاً این لینک را کپی کرده و در مرورگر خود جایگذاری کنید: <a style="cursor: pointer; color: #28C3D4;">[لینک تایید]</a></p>
+                                        <p style="font-family: Vazirmatn; font-size: 13px; text-align: start; padding-bottom: 5px;"><span style="color: red;"><i class="fa-solid fa-triangle-exclamation"></i> توجه:</span> اگر شما این ایمیل را درخواست نکرده‌اید، این پیام را نادیده بگیرید و حساب شما فعال نخواهد شد.</p>
+                                        <h6 style="font-family: Vazirmatn; text-align: left; font-size: 13px; font-weight: 500; padding-top: 20px; color: #28C3D4;">با تشکر، تیم پشتیبانی فروشگاه لورم ایپسوم</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Footer -->
+                            <div style="width: 100%; position: relative; padding-left: 15px; padding-right: 15px; flex: 0 0 100%; border-radius: 0 0 15px 15px; background-color: #2873D4; padding-top: 10px; padding-bottom: 10px;">
+                                <div style="text-align: center;">
+                                    <ul style="list-style: none;">
+                                        <li><a href="javascript:void(0)" style="text-decoration: none; color: #fff;">آدرس سایت: www.onlineShop.com</a></li>
+                                        <li style="padding-top: 5px;"><a href="javascript:void(0)" style="text-decoration: none; color: #fff;">ایمیل: onlineshop@gmail.com</a></li>
+                                        <li style="padding-top: 5px;"><a href="javascript:void(0)" style="text-decoration: none; color: #fff;">شماره تماس: 16102448930+</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</body>
+</html>
+
