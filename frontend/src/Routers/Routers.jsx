@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SetupNewPassword from "../Pages/SetupNewPassword/SetupNewPassword";
 import Contact from '../Pages/Contact/index'
+import VerifyAccount from "../Pages/Verify/VerifyAccount";
 
 export default function Routers() {
 
@@ -18,6 +19,7 @@ export default function Routers() {
         { path: '/signIn', element: <SignIn /> },
         { path: '/forgetPassword', element: <ForgetPassword /> },
         { path: '/setupNewPasswod', element: <SetupNewPassword /> },
+        { path: '/verifyAccount', element: <VerifyAccount /> },
     ];
 
     const sharedLayoutRoutes = [
