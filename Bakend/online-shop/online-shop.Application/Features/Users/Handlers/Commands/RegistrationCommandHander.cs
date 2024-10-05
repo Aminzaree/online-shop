@@ -45,7 +45,7 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
             {
                 request.RegisterDTO.Password = _passwordHelper.EncodePassword(request.RegisterDTO.Password);
                 var register = _mapper.Map<User>(request.RegisterDTO);
-                register.CreatedBy = request.RegisterDTO.Email.Split('@')[0];
+                register.UserName = register.CreatedBy = request.RegisterDTO.Email.Trim().Split('@')[0];                
                 register.ActiveCodeEmail = NameGenerator.GenerateUniqCode();
                 try
                 {

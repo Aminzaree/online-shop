@@ -45,6 +45,8 @@ namespace online_shop.API.Controllers
             }
             return Ok(response);
         }
+
+
         [HttpPost("Register")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<UserDTO>))]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
