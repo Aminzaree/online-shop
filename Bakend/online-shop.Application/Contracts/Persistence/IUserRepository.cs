@@ -6,5 +6,6 @@ namespace online_shop.Application.Contracts.Persistence
     {
         Task<bool> ExistsEmail(string email);
         Task<User?> FindUserAsync(string password,string email);
+        Task<User?> FindUserByEmailCodeAsync(string code);
     }
 }

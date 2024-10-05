@@ -19,12 +19,13 @@ namespace online_shop.Persistence.Repositories
                 .AnyAsync(u=>u.Email.ToLower()== email.ToLower().Trim());
         }
 
-        public async Task<User?> FindUserAsync(string password, string email)
-        {
-            return await _context.Users
+        public async Task<User?> FindUserAsync(string password, string email)=>
+         await _context.Users
                  .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
-        }
 
-      
+        public async Task<User?> FindUserByEmailCodeAsync(string code)=>
+             await _context.Users
+                 .FirstOrDefaultAsync(u => u.ActiveCodeEmail == code );
+        
     }
 }

@@ -48,6 +48,7 @@ builder.Services.ConfigurePersistenceServices(builder.Configuration);
 builder.Services.ConfigureAppilcationServices();
 builder.Services.ConfigureIdentityServices(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
+builder.Services.ConfigureApiServices(builder.Configuration);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("corsPolicy", b =>

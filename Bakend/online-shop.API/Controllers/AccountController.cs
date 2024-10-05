@@ -31,7 +31,7 @@ namespace online_shop.API.Controllers
             if (response.IsSuccess)
             {
                 var user = response.Value as User;
-                 var token = _tokenServices.CreateToken(user);
+                var token = _tokenServices.CreateToken(user);
                 response = new BaseCommandResponse<object>
                 {
                     IsSuccess = response.IsSuccess,
@@ -45,6 +45,7 @@ namespace online_shop.API.Controllers
             }
             return Ok(response);
         }
+
         [HttpPost("Register")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<UserDTO>))]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
@@ -68,6 +69,18 @@ namespace online_shop.API.Controllers
 
             }
 
+            return Ok(response);
+        }
+
+        [HttpPost("{code}",Name ="AccountActive")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<object>))]
+        public async Task<IActionResult> AccountActive(string code)
+        {
+            var VerfiyAccountDTO = new VerfiyAccountDTO()
+            {
+                Code = code
+            };
+            var response = await _mediator.Send(new VerfiyAccountCommand() { VerfiyAccountDTO= VerfiyAccountDTO });
             return Ok(response);
         }
     }
