@@ -10,6 +10,7 @@ builder.Services.AddControllers(op =>
 {
     op.ReturnHttpNotAcceptable = true;
 }).AddNewtonsoftJson();
+builder.Services.AddMvc();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,6 +19,17 @@ builder.Services.ConfigurePersistenceServices(builder.Configuration);
 builder.Services.ConfigureAppilcationServices();
 builder.Services.ConfigureIdentityServices(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
+builder.Services.ConfigureApiServices(builder.Configuration);
+
+builder.Services.AddCors(op =>
+{
+    op.AddPolicy("corsPolicy", b =>
+    {
+        b.AllowAnyHeader()
+        .AllowAnyMethod()
+        .WithOrigins("http://localhost:5173");
+    });
+});
 
 
 var app = builder.Build();
@@ -32,6 +44,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("corsPolicy");
 
 app.MapControllers();
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using online_shop.Application.Utilities.Converts;
 using online_shop.Application.Utilities.Security.PasswordHelper;
 using System.Reflection;
 
@@ -11,6 +12,7 @@ namespace online_shop.Application
             services.AddAutoMapper(assemblies: Assembly.GetExecutingAssembly());
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
             services.AddScoped<IPasswordHelper, PasswordHelper>();
+            services.AddScoped<IViewRenderService, RenderViewToString>();
         }
 
 

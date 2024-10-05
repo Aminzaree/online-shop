@@ -1,0 +1,597 @@
+﻿@using Microsoft.Extensions.Options
+@using online_shop.API.Utilities.Generator
+@using online_shop.Domain.User
+@inject IOptions<AppSetting> _appSetting;
+@model User
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lalezar" rel="stylesheet">
+    <title>فروشگاه | تایید ایمیل</title>
+    <style>
+
+
+        /* -------------------------------------- */
+        /* -------------Column System------------ */
+        /* -------------------------------------- */
+
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .justify-content-center{
+            justify-content: center;
+        }
+
+        .align-items-center{
+            align-items: center;
+        }
+
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+        .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+        .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+        .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+        .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+        .col-xl-auto,.col-xxl-1,.col-xxl-2,.col-xxl-3,.col-xxl-4,.col-xxl-5,.col-xxl-6,.col-xxl-7,.col-xxl-8,.col-xxl-9,.col-xxl-10,.col-xxl-11,.col-xxl-12,.col-xxl-auto{
+            width: 100%;
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-1{
+            flex: 0 0 8.333333%;
+            width: 8.333333%;
+        }
+
+        .col-2{
+            flex: 0 0 16.666667%;
+            width: 16.666667%;
+        }
+
+        .col-3{
+            flex: 0 0 25%;
+            width: 25%;
+        }
+
+        .col-4{
+            flex: 0 0 33.333333%;
+            width: 33.333333%;
+        }
+
+        .col-5{
+            flex: 0 0 41.666667%;
+            width: 41.666667%;
+        }
+
+        .col-6{
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        .col-7{
+            flex: 0 0 58.333333%;
+            width: 58.333333%;
+        }
+
+        .col-8{
+            flex: 0 0 66.666667%;
+            width: 66.666667%;
+        }
+
+        .col-9{
+            flex: 0 0 75%;
+            width: 75%;
+        }
+
+        .col-10{
+            flex: 0 0 83.333333%;
+            width: 83.333333%;
+        }
+
+        .col-11{
+            flex: 0 0 91.666667%;
+            width: 91.666667%;
+        }
+
+        .col-12{
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        @@media screen and (min-width: 576px){
+            .col-sm-1{
+                flex: 0 0 8.333333%;
+                width: 8.333333%;
+            }
+            .col-sm-2{
+                flex: 0 0 16.666667%;
+                width: 16.666667%;
+            }
+            .col-sm-3{
+                flex: 0 0 25%;
+                width: 25%;
+            }
+            .col-sm-4{
+                flex: 0 0 33.333333%;
+                width: 33.333333%;
+            }
+            .col-sm-5{
+                flex: 0 0 41.666667%;
+                width: 41.666667%;
+            }
+            .col-sm-6{
+                flex: 0 0 50%;
+                width: 50%;
+            }
+            .col-sm-7{
+                flex: 0 0 58.333333%;
+                width: 58.333333%;
+            }
+            .col-sm-8{
+                flex: 0 0 66.666667%;
+                width: 66.666667%;
+            }
+            .col-sm-9{
+                flex: 0 0 75%;
+                width: 75%;
+            }
+            .col-sm-10{
+                flex: 0 0 83.333333%;
+                width: 83.333333%;
+            }
+            .col-sm-11{
+                flex: 0 0 91.666667%;
+                width: 91.666667%;
+            }
+            .col-sm-12{
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+
+        @@media screen and (min-width: 768px){
+
+            .col-md-1{
+                flex: 0 0 8.333333%;
+                max-width: 8.333333%;
+            }
+            .col-md-2{
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+            }
+            .col-md-3{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-md-4{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            .col-md-5{
+                flex: 0 0 41.666667%;
+                max-width: 41.666667%;
+            }
+            .col-md-6{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-md-7{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+            }
+            .col-md-8{
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            .col-md-9{
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+            .col-md-10{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+            }
+            .col-md-11{
+                flex: 0 0 91.666667%;
+                max-width: 91.666667%;
+            }
+            .col-md-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+        }
+
+        @@media screen and (min-width: 992px){
+
+            .col-lg-1{
+                flex: 0 0 8.333333%;
+                max-width: 8.333333%;
+            }
+            .col-lg-2{
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+            }
+            .col-lg-3{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-lg-4{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            .col-lg-5{
+                flex: 0 0 41.666667%;
+                max-width: 41.666667%;
+            }
+            .col-lg-6{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-lg-7{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+            }
+            .col-lg-8{
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            .col-lg-9{
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+            .col-lg-10{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+            }
+            .col-lg-11{
+                flex: 0 0 91.666667%;
+                max-width: 91.666667%;
+            }
+            .col-lg-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+        }
+
+        @@media screen and (min-width: 1200px){
+
+            .col-xl-1{
+                flex: 0 0 8.333333%;
+                max-width: 8.333 333%;
+            }
+            .col-xl-2{
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+            }
+            .col-xl-3{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-xl-4{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            .col-xl-5{
+                flex: 0 0 41.666667%;
+                max-width: 41.666667%;
+            }
+            .col-xl-6{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-xl-7{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+            }
+            .col-xl-8{
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            .col-xl-9{
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+            .col-xl-10{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+            }
+            .col-xl-11{
+                flex: 0 0 91.666667%;
+                max-width: 91.666667%;
+            }
+            .col-xl-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+        }
+
+        @@media screen and (min-width: 1400px){
+
+            .col-xxl-1{
+                flex: 0 0 8.333333%;
+                max-width: 8.333333%;
+            }
+            .col-xxl-2{
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+            }
+            .col-xxl-3{
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .col-xxl-4{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            .col-xxl-5{
+                flex: 0 0 41.666667%;
+                max-width: 41.666667%;
+            }
+            .col-xxl-6{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-xxl-7{
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+            }
+            .col-xxl-8{
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            .col-xxl-9{
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+            .col-xxl-10{
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+            }
+            .col-xxl-11{
+                flex: 0 0 91.666667%;
+                max-width: 91.666667%;
+            }
+            .col-xxl-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* ------------------------------------ */
+        /* --------------Body Style------------ */
+        /* ------------------------------------ */
+
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+
+        body{
+        direction: rtl;
+        font-family: Vazirmatn, sans-serif;
+        font-weight: 500;
+        background-color: rgba(225, 225, 225, 0.7);
+        }
+
+        .cardContent button:hover{
+        background-color: #28C3D4 !important;
+        border-color: #fff !important;
+        color: #fff !important;
+        transform: scale(1.05);
+        width: 160px !important;
+        }
+
+        .aboutUs a:hover{
+            color: rgb(224, 224, 224) !important;
+        }
+
+        @@keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            transform: scale(1.05, 1.05);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+        }
+
+        #mainCard {
+            width: 100%;
+            padding: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+
+        .mainCard {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+
+        .cardHeader {
+            width: 100%;
+            background-color: #AEE7E8;
+            text-align: center;
+            padding: 25px 8px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .cardHeader h1 {
+            font-family: Lalezar;
+            color: red;
+            font-size: 45px;
+            animation: zoom-in-zoom-out 2s ease-out infinite;
+        }
+
+        .cardHeader h3 {
+            padding-top: 15px;
+            color: #000;
+        }
+
+        .verifyBtn {
+            font-family: Vazir;
+            margin-top: 15px;
+            padding: 5px 13px;
+            border: none;
+            border-radius: 5px;
+            width: 160px;
+            background-color: #fff;
+            color: #28C3D4;
+            border: 2px solid #28C3D4;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .aboutUs {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cardFooterHeader {
+            padding-bottom: 8px;
+            color: rgb(0, 34, 85);
+            border-bottom: 2px solid rgb(0, 34, 85);
+        }
+
+        .cardFooterUl {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            list-style: none;
+            padding-top: 10px;
+        }
+
+
+        .cardFooterUl .aboutLi {
+            font-size: 14px;
+            padding-top: 8px;
+        }
+
+        .cardFooterUl .aboutLi a{
+            color: #e1e1e1;
+            text-decoration: none;
+        }
+
+        .socialLI {
+            padding-top: 10px;
+            text-decoration: none;
+        }
+
+        .socialLI svg {
+            font-size: 20px;
+            color: #e1e1e1;
+        }
+
+        .socialLI svg:hover {
+            color: rgb(0, 34, 85);
+        }
+
+        /* ------------------------------------ */
+        /* --------------Responsive------------ */
+        /* ------------------------------------ */
+
+        @@media screen and (max-width: 380px){
+        .inputBox svg{
+            top: 37px !important;
+            right: 160px !important;
+        }
+        }
+
+    </style>
+
+</head>
+
+<!-- Start Body -->
+<body>
+    <!-- Main Card -->
+    <section id="mainCard">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="mainCard">
+                        <div class="row justify-content-center">
+                            <!-- Card Header -->
+                            <div class="col-12">
+                                <div class="cardHeader">
+                                    <h1> فروشگــــــاه</h1>
+                                    <h3>تـاییـد ایمیل شمـا</h3>
+                                </div>
+                            </div>
+                            <!-- Card Main -->
+                            <div class="col-12">
+                                <div class="cardMain" style="width: 100%; background-color: #fff; padding: 20px 27px;">
+                                    <div class="inputBox" style="width: 100%;">
+                                        <label style="font-size: 15px;">سلام</label>
+                                        <span style="font-size: 15px; color: #28C3D4;">@Model.UserName</span>
+                                        <span style="font-size: 15px;">عزیز،</span>
+                                    </div>
+                                    <div class="cardContent" style="text-align: center;">
+                                        <p style="font-size: 13px; text-align: start; padding-top: 15px; line-height: 28px; text-align: justify;">از اینکه فروشگاه ما را برای خرید انتخاب کردید، صمیمانه از شما سپاسگزاریم! ما مفتخریم که همراه شما باشیم و هدف ما این است که تجربه خریدی لذت‌بخش و رضایت‌بخش برای شما فراهم کنیم. برای فعال‌سازی حساب کاربری خود و دسترسی کامل به امکانات فروشگاه، لطفاً روی دکمه زیر کلیک کنید:</p>
+                                        <a href="@_appSetting.Value.UrlVerfiyEmail?code:@Model.ActiveCodeEmail" class="verifyBtn"><i style="font-size: 15px; margin-left: 8px;" class="fa-solid fa-check"></i>حسابم را تایید کن</a>
+                                        <p style="font-size: 13px; text-align: start; padding-top: 15px;">اگر لینک بالا مشکل دارد، لطفاً این لینک را کپی کرده و در مرورگر خود جایگذاری کنید: <a style="cursor: pointer; color: #28C3D4;">[لینک تایید]</a></p>
+                                        <p style="font-size: 13px; text-align: start; padding-top: 15px; padding-bottom: 5px;"><span style="color: red;"><i class="fa-solid fa-triangle-exclamation"></i> توجه:</span> اگر شما این ایمیل را درخواست نکرده‌اید، این پیام را نادیده بگیرید و حساب شما فعال نخواهد شد.</p>
+                                        <h6 style="text-align: left; font-size: 11px; font-weight: 500; padding-top: 20px; color: #28C3D4;">با تشکر، تیم پشتیبانی فروشگاه لورم ایپسوم</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Footer -->
+                            <div class="col-12">
+                                <div class="cardFooter" style="width: 100%; background-color: #28C3D4; padding: 50px 10px; border-radius: 0 0 15px 15px;">
+                                    <div class="row justify-content-center">
+                                        <div class="col-10">
+                                            <div class="row aboutUs">
+                                                <div class="col-6">
+                                                    <h5 class="cardFooterHeader">درباره ما</h5>
+                                                    <ul class="cardFooterUl" style="display: block;">
+                                                        <li class="aboutLi"><a href="javascript:void(0)"><i style="margin-left: 6px;" class="fa-solid fa-globe"></i> www.myShop.com</a></li>
+                                                        <li class="aboutLi"><a href="javascript:void(0)"><i style="margin-left: 6px;" class="fa-solid fa-phone"></i> ۹۵۷***۰۹٣٦۳</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 class="cardFooterHeader">ما را دنبال کنید در:</h5>
+                                                    <ul class="cardFooterUl">
+                                                        <li class="socialLI"><a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
+                                                        <li class="socialLI"><a href="javascript:void(0)"><i class="fa-brands fa-telegram"></i></a></li>
+                                                        <li class="socialLI"><a href="javascript:void(0)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                        <li class="socialLI"><a href="javascript:void(0)"><i class="fa-brands fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</body>
+</html>

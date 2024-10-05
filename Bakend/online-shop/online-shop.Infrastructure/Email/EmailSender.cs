@@ -21,7 +21,7 @@ namespace online_shop.Infrastructure.Email
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient(_config.SmtpClient);
-                mail.From = new MailAddress(_config.FromAddress, "تست");
+                mail.From = new MailAddress(_config.FromAddress, email.Title);
                 mail.To.Add(email.To);
                 mail.Subject = email.Subject;
                 mail.Body = email.Body;

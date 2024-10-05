@@ -6,6 +6,7 @@ using online_shop.Application.DTOs.Account.Validators;
 using online_shop.Application.Features.Users.Requests.Commands;
 using online_shop.Application.Models.Email;
 using online_shop.Application.Responses;
+using online_shop.Application.Utilities.Converts;
 using online_shop.Application.Utilities.Generator;
 using online_shop.Application.Utilities.Security.PasswordHelper;
 using online_shop.Domain.User;
@@ -18,13 +19,15 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
         private readonly IMapper _mapper;
         private readonly IPasswordHelper _passwordHelper;
         private readonly IEmailSender _emailSender;
+        private readonly IViewRenderService _viewRenderService;
 
-        public RegistrationCommandHander(IUserRepository userRepository, IMapper mapper, IPasswordHelper passwordHelper = null, IEmailSender emailSender = null)
+        public RegistrationCommandHander(IUserRepository userRepository, IMapper mapper, IPasswordHelper passwordHelper = null, IEmailSender emailSender = null, IViewRenderService viewRenderService = null)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _passwordHelper = passwordHelper;
             _emailSender = emailSender;
+            _viewRenderService = viewRenderService;
         }
 
         public async Task<BaseCommandResponse> Handle(RegistrationCommand request, CancellationToken cancellationToken)
@@ -51,14 +54,17 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
                     response.Message = "حساب کاربری با موفقعیت ساخت شد";
                     response.Id = register.Id;
 
-                    string body = $"<html lang='en'><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body>   <h>خوش آمدید<span style=\"color: chocolate;\">{register.UserName}</span></h>    <button type=\"button\" value='{register.ActiveCodeEmail}'>Ok</button></body></html>";
+                    string body = _viewRenderService.RenderToString("VerifyRegisterAccount", register);
                     var email = new EmailDTO()
                     {
                         Body = body,
                         Subject = "تایید حساب کاربری",
-                        To = register.Email
+                        To = register.Email,
+                        Title="فعال سازی حساب"
                     };
+
                     _emailSender.SendEmailAsync(email);
+
                 }
                 catch (Exception)
                 {
