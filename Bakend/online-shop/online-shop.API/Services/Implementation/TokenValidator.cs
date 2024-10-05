@@ -1,8 +1,6 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using online_shop.API.Services.Interface;
-using online_shop.Application.Contracts.Persistence;
 using online_shop.Application.Features.Users.Requests.Queries;
 using System.Security.Claims;
 
@@ -27,7 +25,7 @@ namespace online_shop.API.Services.Implementation
             }
             var userId = claimsIdentity?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var userDB = await _mediator.Send(new GetUserByIdRequest() { UserId = Guid.Parse(userId) });
-            if (userDB.IsActive)
+            if (!userDB.IsActive)
             {
                 context.Fail("حساب کاربری شما فعال نیست");
                 return;

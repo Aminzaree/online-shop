@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rE9dSZAPI/Y=",
+  "dgSpecHash": "U3RLq+zCI54=",
   "success": true,
-  "projectFilePath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
+  "projectFilePath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nader\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Nader\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

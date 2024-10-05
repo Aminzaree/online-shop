@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "document", "document", "{9FF9B8E1-9270-4D16-B5A5-87B721935464}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\نمونه پروژه\Dating\DatingApp\Document.txt = ..\..\..\..\نمونه پروژه\Dating\DatingApp\Document.txt
+		Connection.txt = Connection.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C3B12D9-84AC-4A9F-86FE-112756AABE68}"
@@ -26,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.API", "online-s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.Persistence", "online-shop.Persistence\online-shop.Persistence.csproj", "{62521F54-4755-4A29-8289-335735E731A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online-shop.Infrastructure", "online-shop.Infrastructure\online-shop.Infrastructure.csproj", "{D0EEFCE6-29B7-47FC-9EA3-3AB59F8D2E51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "online-shop.Infrastructure", "online-shop.Infrastructure\online-shop.Infrastructure.csproj", "{D0EEFCE6-29B7-47FC-9EA3-3AB59F8D2E51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

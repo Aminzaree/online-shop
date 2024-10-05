@@ -16,3 +16,21 @@ F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\onli
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\refint\online-shop.Infrastructure.dll
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.pdb
 F:\Programing\Application Web\ASP\پروژه\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\ref\online-shop.Infrastructure.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Infrastructure.deps.json
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Infrastructure.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Infrastructure.pdb
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Application.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Domain.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Application.pdb
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\bin\Debug\net8.0\online-shop.Domain.pdb
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.csproj.AssemblyReference.cache
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.AssemblyInfoInputs.cache
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.AssemblyInfo.cs
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.sourcelink.json
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-s.DDD2EE86.Up2Date
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\refint\online-shop.Infrastructure.dll
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\online-shop.Infrastructure.pdb
+E:\Project\online-shop\Bakend\online-shop\online-shop.Infrastructure\obj\Debug\net8.0\ref\online-shop.Infrastructure.dll

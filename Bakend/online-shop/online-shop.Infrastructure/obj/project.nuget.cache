@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ntPl6AxEfAY=",
+  "dgSpecHash": "LvP/iSNYV8k=",
   "success": true,
-  "projectFilePath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
+  "projectFilePath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nader\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Nader\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",

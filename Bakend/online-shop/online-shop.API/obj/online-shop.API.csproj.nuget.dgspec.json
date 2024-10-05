@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj": {}
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj": {}
   },
   "projects": {
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj": {
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj",
+        "projectUniqueName": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj",
         "projectName": "online-shop.API",
-        "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj",
+        "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.API\\online-shop.API.csproj",
         "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.API\\obj\\",
+        "outputPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,17 +33,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
               },
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
               },
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj"
               },
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj"
               }
             }
           }
@@ -105,18 +105,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj",
+        "projectUniqueName": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj",
         "projectName": "online-shop.Application",
-        "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj",
+        "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj",
         "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\obj\\",
+        "outputPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,8 +138,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
               }
             }
           }
@@ -200,18 +200,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj",
+        "projectUniqueName": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj",
         "projectName": "online-shop.Domain",
-        "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj",
+        "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj",
         "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\obj\\",
+        "outputPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -265,18 +265,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj": {
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
         "projectName": "online-shop.Infrastructure",
-        "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
+        "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\online-shop.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\obj\\",
+        "outputPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -298,8 +298,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
               }
             }
           }
@@ -340,18 +340,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj": {
+    "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
+        "projectUniqueName": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
         "projectName": "online-shop.Persistence",
-        "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
+        "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\online-shop.Persistence.csproj",
         "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
-        "outputPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\obj\\",
+        "outputPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -373,11 +373,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Application\\online-shop.Application.csproj"
               },
-              "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
-                "projectPath": "F:\\Programing\\Application Web\\ASP\\پروژه\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
+              "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj": {
+                "projectPath": "E:\\Project\\online-shop\\Bakend\\online-shop\\online-shop.Domain\\online-shop.Domain.csproj"
               }
             }
           }
@@ -428,7 +428,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

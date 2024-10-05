@@ -1653,7 +1653,10 @@
       },
       "online-shop.Domain/1.0.0": {
         "runtime": {
-          "online-shop.Domain.dll": {}
+          "online-shop.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
