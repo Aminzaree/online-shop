@@ -6,3 +6,11 @@
 /Bakend/online-shop/.vs/online-shop
 /Bakend/online-shop/online-shop.API/appsettings.Development.json
 /Bakend/online-shop/online-shop.Persistence/Migrations
+/Bakend/online-shop/online-shop.Infrastructure/bin/Debug/net8.0
+/Bakend/online-shop/online-shop.Infrastructure/obj
+/Bakend/online-shop/online-shop.Domain/bin/Debug/net8.0
+/Bakend/online-shop/online-shop.Domain/obj
+/Bakend/online-shop/online-shop.Application/bin/Debug/net8.0
+/Bakend/online-shop/online-shop.Application/obj
+/Bakend/online-shop/online-shop.API/bin/Debug/net8.0
+/Bakend/online-shop/online-shop.API/obj
