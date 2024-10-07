@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input, Button, Checkbox } from "@nextui-org/react"
 import { FaUserPlus, FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import PasswordStrengthProgress from "../../Components/Password Strength Progress/PasswordStrengthProgress";
 import { VscError } from "react-icons/vsc";
 import { MdMobileFriendly } from "react-icons/md";
@@ -10,6 +10,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDisclosure } from "@nextui-org/react";
 import Terms from "./Terms";
+import { instanse } from "../../Services/instanse";
+import Cookies from "js-cookie";
 
 
 export default function SignUp() {
@@ -18,6 +20,7 @@ export default function SignUp() {
     const [isVisiblePassword, setIsVisiblePassword] = useState(false);
     const [checkPassword, setCheckPassword] = useState("");
     const [showPasswordStrength, setShowPasswordStrength] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
@@ -43,8 +46,36 @@ export default function SignUp() {
         };
     };
 
-    const onSubmit = (data) => {
-        alert("Hello World");
+    const navigate = useNavigate();
+
+    const onSubmit = async (data) => {
+
+        try {
+            setIsLoading(true);
+            const response = await instanse.post("Account/Register", data)
+            const {isSuccess, value, message} = response.data;
+
+            if(isSuccess) {
+                navigate("/");
+                Cookies.set("userToken", value.token, {expires: 1});
+                Cookies.set("userID", value.userId, {expires: 1});
+                console.log(value);
+                toast.success(message || "حساب کاربری با موفقیت ساخته شد.");
+            } else {
+                value.map((item) => {
+                    toast.error(item)
+                });
+            };
+
+        } catch (error) {
+
+            console.error(error);
+            toast.error("عدم برقراری ارتباط با سرور")
+            
+        } finally {
+            setIsLoading(false);
+        }
+        
     };
     
     return (
@@ -85,7 +116,7 @@ export default function SignUp() {
                                     <Input
                                         size={"md"}
                                         variant={"bordered"}
-                                        type="email"
+                                        type="text"
                                         name="email"
                                         label="ایمیل"
                                         isInvalid={isInvalid && !!errors.email}
@@ -139,24 +170,24 @@ export default function SignUp() {
                                 </div>
                             </div>
                             <div className="w-full mt-4">
-                                <label htmlFor="confirmPassword">
+                                <label htmlFor="rePassword">
                                     <Input
                                         size={"md"}
                                         variant={"bordered"}
                                         type="password"
-                                        name="confirmPassword"
+                                        name="rePassword"
                                         label="تکرار کلمه عبور"
-                                        isInvalid={isInvalid && !!errors.confirmPassword}
+                                        isInvalid={isInvalid && !!errors.rePassword}
                                         isClearable
                                         isRequired
-                                        {...register("confirmPassword", {
+                                        {...register("rePassword", {
                                             required: "لطفا رمز عبور خود را تکرار کنید."
                                         })}
                                     />
                                 </label>
                                 {
-                                    errors.confirmPassword &&
-                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.confirmPassword.message}</p>
+                                    errors.rePassword &&
+                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.rePassword.message}</p>
                                 }
                             </div>
                             <div className="w-full flex text-start mt-4">
@@ -169,7 +200,7 @@ export default function SignUp() {
                                 <Button
                                     type="submit"
                                     color="default"
-                                    isLoading={false}
+                                    isLoading={isLoading}
                                     className="w-full bg-black text-white dark:bg-[#C6C7F8] dark:text-black"
                                 >
                                     عضویت
