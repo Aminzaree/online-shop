@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignUp from './../Pages/SignUp/SignUp'
-import SignIn from './../Pages/SignIn/SignIn'
+import SignUp from './../Pages/Auth/SignUp/SignUp'
+import SignIn from './../Pages/Auth/SignIn/SignIn'
 import LayoutMain from './../SharedLayout/LayoutMain'
 import Home from './../Pages/Home/Home'
 import Product from './../Pages/Product/Product'
 import About from './../Pages/About/About'
 import Error from "../Pages/Error/Error";
 import { ToastContainer } from "react-toastify";
-import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
-import SetupNewPassword from "../Pages/SetupNewPassword/SetupNewPassword";
+import ForgetPassword from "../Pages/Auth/ForgetPassword/ForgetPassword";
+import SetupNewPassword from "../Pages/Auth/SetupNewPassword/SetupNewPassword";
 import Contact from '../Pages/Contact/index'
-import VerifyAccount from "../Pages/Verify/VerifyAccount";
+import VerifyAccount from "../Pages/Auth/Verify/VerifyAccount";
 
 export default function Routers() {
 

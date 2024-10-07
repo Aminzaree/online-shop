@@ -1,4 +1,4 @@
-import CustomModal from "../../Components/Modal/customModal";
+import CustomModal from "../../../Components/Modal/customModal";
 import { ModalHeader, ModalBody, ModalFooter, Button } from "@nextui-org/react";
 import { useDisclosure } from "@nextui-org/react";
 
