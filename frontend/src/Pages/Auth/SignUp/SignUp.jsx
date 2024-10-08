@@ -12,6 +12,7 @@ import { useDisclosure } from "@nextui-org/react";
 import Terms from "./Terms";
 import { instanse } from "../../../Services/instanse"
 import Cookies from "js-cookie";
+import CheckEmail from "./CheckEmail";
 
 
 export default function SignUp() {
@@ -21,6 +22,7 @@ export default function SignUp() {
     const [checkPassword, setCheckPassword] = useState("");
     const [showPasswordStrength, setShowPasswordStrength] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
@@ -56,7 +58,7 @@ export default function SignUp() {
             const {isSuccess, value, message} = response.data;
 
             if(isSuccess) {
-                navigate("/");
+                setIsModalOpen(true);
                 Cookies.set("userToken", value.token, {expires: 1});
                 Cookies.set("userID", value.userId, {expires: 1});
                 console.log(value);
@@ -219,6 +221,7 @@ export default function SignUp() {
 
             {/* Terms Modal */}
             <Terms isOpen={isOpen} onOpenChange={onOpenChange} />
+            <CheckEmail isOpen={isModalOpen} onOpenChange={setIsModalOpen} /> 
             <p className="text-xs mt-2 text-zinc-300">کلیه حقوق این وبسایت متعلق به تیم توسعه و طراحی ما می‌باشد. کپی نکن !</p>
         </div>
     );
