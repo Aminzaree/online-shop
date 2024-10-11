@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using online_shop.API.Services.Interface;
 using online_shop.Application.DTOs.Account;
@@ -72,7 +73,7 @@ namespace online_shop.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("{code}",Name ="AccountActive")]
+        [HttpPost("AccountActive/{code}", Name ="AccountActive")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<object>))]
         public async Task<IActionResult> AccountActive(string code)
         {
@@ -81,6 +82,26 @@ namespace online_shop.API.Controllers
                 Code = code
             };
             var response = await _mediator.Send(new VerfiyAccountCommand() { VerfiyAccountDTO= VerfiyAccountDTO });
+            return Ok(response);
+        }
+
+        [HttpPost("ForgetPassword/{email}", Name = "ForgetPassword")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<object>))]
+        public async Task<IActionResult> ForgetPassword(string email)
+        {
+            var forgetPassword= new ForgetPasswordDTO()
+            {
+                Email = email
+            };
+            var response = await _mediator.Send(new ForgetPasswordCommand() { ForgetPasswordDTO = forgetPassword });
+            return Ok(response);
+        }
+
+        [HttpPost("ResetPassword")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(BaseCommandResponse<object>))]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPassword)
+        {           
+            var response = await _mediator.Send(new RestPasswordCommand() { RestPasswordDTO = resetPassword });
             return Ok(response);
         }
     }

@@ -8,24 +8,28 @@ namespace online_shop.Persistence.Repositories
     {
         private readonly OnlineShopDbContext _context;
 
-        public UserRepository(OnlineShopDbContext context):base(context) 
+        public UserRepository(OnlineShopDbContext context) : base(context)
         {
             _context = context;
         }
 
         public async Task<bool> ExistsEmail(string email)
         {
-           return await _context.Users
-                .AnyAsync(u=>u.Email.ToLower()== email.ToLower().Trim());
+            return await _context.Users
+                 .AnyAsync(u => u.Email.ToLower() == email.ToLower().Trim());
         }
 
-        public async Task<User?> FindUserAsync(string password, string email)=>
+        public async Task<User?> FindUserBuEmailAndPasswordAsync(string password, string email) =>
          await _context.Users
                  .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
-        public async Task<User?> FindUserByEmailCodeAsync(string code)=>
+        public async Task<User?> GetUserByEmailAsync(string email) =>
+            await _context.Users
+                     .FirstOrDefaultAsync(u => u.Email.ToLower() == email.ToLower().Trim());
+
+        public async Task<User?> GetUserByEmailCodeAsync(string code) =>
              await _context.Users
-                 .FirstOrDefaultAsync(u => u.ActiveCodeEmail == code );
-        
+                 .FirstOrDefaultAsync(u => u.ActiveCodeEmail == code);
+
     }
 }

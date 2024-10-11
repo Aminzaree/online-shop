@@ -3,6 +3,7 @@ using MediatR;
 using online_shop.Application.Contracts.Infrastructure;
 using online_shop.Application.Contracts.Persistence;
 using online_shop.Application.DTOs.Account.Validators;
+using online_shop.Application.Extensions;
 using online_shop.Application.Features.Users.Requests.Commands;
 using online_shop.Application.Models.Email;
 using online_shop.Application.Responses;
@@ -39,7 +40,7 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
             {
                 response.IsSuccess = false;
                 response.Message = "اطلاعات را صحیح ورد کنید";
-                response.Value = validatorResult.Errors.Select(s => s.ErrorMessage).ToList();
+                response.Value = validatorResult.GetErrors();
             }
             else
             {
@@ -54,7 +55,7 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
                     response.Message = "حساب کاربری با موفقعیت ساخت شد";
                     response.Id = register.Id;
 
-                    string body = _viewRenderService.RenderToString("AccountVerify", register);
+                    string body = _viewRenderService.RenderToString("Email/AccountVerify", register);
                     var email = new EmailDTO()
                     {
                         Body = body,

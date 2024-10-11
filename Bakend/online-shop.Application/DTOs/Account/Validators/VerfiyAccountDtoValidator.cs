@@ -7,9 +7,7 @@ namespace online_shop.Application.DTOs.Account.Validators
         public VerfiyAccountDtoValidator()
         {
             RuleFor(c => c.Code)
-                   .NotEmpty().WithMessage("{PropertyName} نمی تواند خالی باشد")
-                  .NotNull();
-                 
+                   .NotEmpty().WithMessage("{PropertyName} نمی تواند خالی باشد");                 
         }
     }
 }

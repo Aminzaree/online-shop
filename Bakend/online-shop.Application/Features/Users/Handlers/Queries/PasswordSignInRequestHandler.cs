@@ -32,7 +32,7 @@ namespace online_shop.Application.Features.Users.Handlers.Queries
             else
             {
                 string passwordHash=_passwordHelper.EncodePassword(request.LoginDTO.Password);
-                var user =await _userRepository.FindUserAsync(passwordHash, request.LoginDTO.Email);
+                var user =await _userRepository.FindUserBuEmailAndPasswordAsync(passwordHash, request.LoginDTO.Email);
                 if (user is not null)
                 {
 
@@ -50,8 +50,7 @@ namespace online_shop.Application.Features.Users.Handlers.Queries
                     {
                         response.IsSuccess = true;
                         response.Value = user;
-                    }                    
-
+                    }   
                 }
                 else
                 {

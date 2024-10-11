@@ -23,11 +23,11 @@ namespace online_shop.Application.Features.Users.Handlers.Commands
             var result = await validator.ValidateAsync(request.VerfiyAccountDTO, cancellationToken);
             if (result.IsValid)
             {
-                var user=await _userRepository.FindUserByEmailCodeAsync(request.VerfiyAccountDTO.Code.Trim());
+                var user=await _userRepository.GetUserByEmailCodeAsync(request.VerfiyAccountDTO.Code.Trim());
                 if(user is not null)
                 {
                     user.IsActive=true;
-                    user.ActiveCodeEmail = NameGenerator.GenerateUniqCode(); 
+                    user.ActiveCodeEmail = null;
                     user.IsEmailActive=true;
                     try
                     {

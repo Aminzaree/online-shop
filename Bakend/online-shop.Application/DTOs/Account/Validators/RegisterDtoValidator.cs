@@ -12,8 +12,7 @@ namespace online_shop.Application.DTOs.Account.Validators
             _userRepository = userRepository;
             RuleFor(c => c.Email)
                    .NotEmpty().WithMessage("{PropertyName} نمی تواند خالی باشد")
-                  .NotNull()
-                  .MaximumLength(200).WithMessage("{PropertyName}نمی تواند بیشتر از {PropertyValue} کارکتر باشد")
+                  .MaximumLength(200).WithMessage("{PropertyName}نمی تواند بیشتر از {MaxLength} کارکتر باشد")
                   .EmailAddress().WithMessage("{PropertyName}  وارد شد معتبر نیست")
                   .WithName("ایمیل")
                   .MustAsync(async (email, token) =>
@@ -24,9 +23,8 @@ namespace online_shop.Application.DTOs.Account.Validators
 
             RuleFor(c => c.Password)
                 .NotEmpty().WithMessage("{PropertyName} نمی تواند خالی باشد")
-               .NotNull()
-               .MaximumLength(100).WithMessage("{PropertyName}نمی تواند بیشتر از {PropertyValue} کارکتر باشد")
-               .MinimumLength(8).WithMessage("{PropertyName}نمی تواند کمتر از {PropertyValue} کارکتر باشد")
+               .MaximumLength(100).WithMessage("{PropertyName}نمی تواند بیشتر از {MaxLength} کارکتر باشد")
+               .MinimumLength(8).WithMessage("{PropertyName}نمی تواند کمتر از {MinLength} کارکتر باشد")
                .Equal(p=>p.RePassword).WithMessage("{PropertyName} باهم مغایرت دارند")
                .WithName("پسورد");
 
