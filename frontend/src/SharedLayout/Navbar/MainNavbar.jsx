@@ -13,7 +13,7 @@ import DarkModeToggle from "../../Components/Dark Mode Toggle/DarkModeToggle";
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const menuItems = ["خانه", "محصولات", "درباره ما", "تماس با ما"];
+    const menuItems = ["خانه", "محصولات", "پرسش‌های متداول", "درباره ما", "تماس با ما"];
 
     return (
         <Navbar
@@ -90,6 +90,11 @@ export default function App() {
                                 <NavbarItem>
                                     <NavLink to='/product' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
                                         محصولات
+                                    </NavLink>
+                                </NavbarItem>
+                                <NavbarItem>
+                                    <NavLink to='/' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
+                                        پرسش‌های متداول
                                     </NavLink>
                                 </NavbarItem>
                                 <NavbarItem>

@@ -40,7 +40,7 @@ export default function VerifyAccount() {
                         const code = queryParams.get('code');
 
                         if (code) {
-                              const response = await instanse.post(`Account/${code}`);
+                              const response = await instanse.post(`Account/AccountActive/${code}`);
                               const { isSuccess, value, message } = response.data;
 
                               if (isSuccess) {

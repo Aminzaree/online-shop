@@ -20,6 +20,7 @@ export default function Routers() {
         { path: '/forgetPassword', element: <ForgetPassword /> },
         { path: '/setupNewPasswod', element: <SetupNewPassword /> },
         { path: '/verifyAccount', element: <VerifyAccount /> },
+        { path: '*', element: <Error /> },
     ];
 
     const sharedLayoutRoutes = [
@@ -27,7 +28,6 @@ export default function Routers() {
         { path: '/product', element: <Product /> },
         { path: '/about', element: <About /> },
         { path: '/contact', element: <Contact /> },
-        { path: '*', element: <Error /> },
     ];
 
 
