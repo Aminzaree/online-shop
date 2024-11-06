@@ -5,18 +5,46 @@ import { MdMobileFriendly } from "react-icons/md";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa"
 import { VscError } from "react-icons/vsc";
 import { useState } from "react";
+import { instanse } from "../../../Services/instanse";
+import Cookies from "js-cookie";
+import { toast } from "react-toastify";
 
 
 export default function SignIn() {
 
     const [isVisiblePassword, setIsVisiblePassword] = useState(false);
     const [isInvalid, setIsInvalid] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const toggleVisibility = () => setIsVisiblePassword(!isVisiblePassword);
 
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
 
-    const onSubmit = (data) => {
-        console.log("hello world");
+    const navigate = useNavigate();
+
+    const onSubmit = async (data) => {
+        
+        try {
+            setIsLoading(true);
+            const response = await instanse.post("Account/Login", data);
+            const {isSuccess, value, message} = response.data;
+
+            if(isSuccess) {
+                navigate("/");
+                Cookies.set("userToken", value.token, {expires: 1});
+                Cookies.set("userID", value.userId, {expires: 1});
+                console.log(value);
+                toast.success("خواش آمدید");
+                toast.success(message || "ورود با موفقیت انجام شد.");
+            } else {
+                toast.error(message || "نام کاربری یا کلمه عبور اشتباه است.");
+            }
+            
+        } catch (error) {
+            toast.error("خطایی رخ داده است!");
+        } finally {
+            setIsLoading(false);
+        }
+
     }
 
     const handleError = () => {
@@ -26,8 +54,6 @@ export default function SignIn() {
             setIsInvalid(false);
         };
     };
-
-    const navigate = useNavigate();
 
     const handleForgetPassword = () => {
         navigate("/forgetPassword", {state: {formSignIn: true}})
@@ -119,6 +145,7 @@ export default function SignIn() {
                                 <Button
                                     type="submit"
                                     color="default"
+                                    isLoading={isLoading}
                                     className="w-full bg-black text-white dark:bg-[#C6C7F8] dark:text-black"
                                 >
                                     ورود

@@ -47,7 +47,7 @@ export default function VerifyAccount() {
                                     setVerify(true);
 
                                     setTimeout(() => {
-                                          navigate("/")
+                                          navigate("/signIn")
                                     }, 2000)
 
                                     console.log(response.data);
@@ -85,9 +85,6 @@ export default function VerifyAccount() {
                                     <h1 className="sm:text-2xl font-bold -m-10 text-[#007d7c]">درحال بررسی حساب شما هستیم، لطفا شکیبا باشید...</h1>
                               </>
                   }
-
-
-
             </div>
       );
 };

@@ -59,8 +59,6 @@ export default function SignUp() {
 
             if(isSuccess) {
                 setIsModalOpen(true);
-                Cookies.set("userToken", value.token, {expires: 1});
-                Cookies.set("userID", value.userId, {expires: 1});
                 console.log(value);
                 toast.success(message || "حساب کاربری با موفقیت ساخته شد.");
             } else {
@@ -71,8 +69,8 @@ export default function SignUp() {
 
         } catch (error) {
 
-            console.error(error);
-            toast.error("عدم برقراری ارتباط با سرور")
+            // console.error(error);
+            toast.error("عدم برقراری ارتباط با سرور");
             
         } finally {
             setIsLoading(false);
@@ -221,6 +219,8 @@ export default function SignUp() {
 
             {/* Terms Modal */}
             <Terms isOpen={isOpen} onOpenChange={onOpenChange} />
+
+            {/* Check Email Verification */}
             <CheckEmail isOpen={isModalOpen} onOpenChange={setIsModalOpen} /> 
             <p className="text-xs mt-2 text-zinc-300">کلیه حقوق این وبسایت متعلق به تیم توسعه و طراحی ما می‌باشد. کپی نکن !</p>
         </div>

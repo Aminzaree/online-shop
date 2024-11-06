@@ -1,11 +1,19 @@
-import { useEffect } from "react";
-import { Button, Input } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import { Button, Input, useDisclosure } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
 import { VscError } from "react-icons/vsc";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { instanse } from "../../../Services/instanse";
+import { toast } from "react-toastify";
+import CheckEmailPassword from "./checkEmailPassword";
 
 
 export default function ForgetPassword() {
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -18,8 +26,32 @@ export default function ForgetPassword() {
 
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
 
-    const onSubmit = (data) => {
-        console.log("hello world")
+    const onSubmit = async (data) => {
+
+        const email = data.email;
+
+        try {
+            setIsLoading(true);
+            const response = await instanse.post(`Account/ForgetPassword/${email}`);
+            const {isSuccess, value, message} = response.data;
+
+            if(isSuccess) {
+                setIsModalOpen(true);
+                toast.success(message || "درخواست ایمیل شما با موفقیت ارسال شد")
+            } else {
+                value.map((item) => {
+                    toast.error(item)
+                });
+            }
+            
+        } catch (error) {
+
+            console.error(error);
+            console.log(error);
+            
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     return (
@@ -65,6 +97,9 @@ export default function ForgetPassword() {
                 </div>
             </div>
             <p className="text-xs mt-2 text-zinc-300">کلیه حقوق این وبسایت متعلق به تیم توسعه و طراحی ما می‌باشد. کپی نکن !</p>
+
+            {/* Check Email Password Setup */}
+            <CheckEmailPassword isOpen={isModalOpen} onOpenChange={setIsModalOpen} />
         </div>
     );
 };

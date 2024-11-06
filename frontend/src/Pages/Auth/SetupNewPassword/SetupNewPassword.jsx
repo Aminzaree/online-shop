@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Checkbox, Input, useDisclosure } from "@nextui-org/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { VscError } from "react-icons/vsc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Terms from "../SignUp/Terms";
 import PasswordStrengthProgress from "../../../Components/Password Strength Progress/PasswordStrengthProgress";
+import { instanse } from "../../../Services/instanse";
+import { toast } from "react-toastify";
 
 export default function SetupNewPassword() {
 
@@ -16,6 +18,9 @@ export default function SetupNewPassword() {
     
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
+
+    const location = useLocation();
+    const navigate = useNavigate();
     
     const toggleVisibility = () => setIsVisiblePassword(!isVisiblePassword);
 
@@ -38,9 +43,43 @@ export default function SetupNewPassword() {
         };
     };
 
-    const onSubmit = (data) => {
-        alert("Hello World");
+    const onSubmit = async (data) => {
+        try {
+            const queryParams = new URLSearchParams(location.search);
+            const code = queryParams.get("code");
+    
+            if (code) {
+                const payload = {
+                    code,
+                    password: data.password,
+                    rePassword: data.rePassword,
+                };
+    
+                const response = await instanse.post("Account/ResetPassword", payload, {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
+    
+                const { isSuccess, value, message } = response.data;
+    
+                if (isSuccess) {
+                    navigate("/signIn");
+                    toast.success(message || "کلمه عبور با موفقیت تغییر کرد");
+                } else {
+                    value.forEach((item) => {
+                        toast.error(item);
+                    });
+                }
+            } else {
+                toast.error("در روند درخواست خطایی رخ داده است.");
+            }
+    
+        } catch (error) {
+            console.error(error);
+        }
     };
+    
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center mx-auto px-4 md:px-0" >
@@ -90,24 +129,24 @@ export default function SetupNewPassword() {
                                 </div>
                             </div>
                             <div className="w-full mt-4">
-                                <label htmlFor="confirmPassword">
+                                <label htmlFor="rePassword">
                                     <Input
                                         size={"md"}
                                         variant={"bordered"}
                                         type="password"
-                                        name="confirmPassword"
+                                        name="rePassword"
                                         label="تکرار کلمه عبور"
-                                        isInvalid={isInvalid && !!errors.confirmPassword}
+                                        isInvalid={isInvalid && !!errors.rePassword}
                                         isClearable
                                         isRequired
-                                        {...register("confirmPassword", {
+                                        {...register("rePassword", {
                                             required: "لطفا رمز عبور خود را تکرار کنید."
                                         })}
                                     />
                                 </label>
                                 {
-                                    errors.confirmPassword &&
-                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.confirmPassword.message}</p>
+                                    errors.rePassword &&
+                                    <p className="flex items-center text-xs text-start text-red-600 mt-1"><VscError className="ml-1" size={15} />{errors.rePassword.message}</p>
                                 }
                             </div>
                             <div className="w-full flex text-start mt-4">

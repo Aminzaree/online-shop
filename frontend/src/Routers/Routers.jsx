@@ -18,7 +18,7 @@ export default function Routers() {
         { path: '/signUp', element: <SignUp /> },
         { path: '/signIn', element: <SignIn /> },
         { path: '/forgetPassword', element: <ForgetPassword /> },
-        { path: '/setupNewPasswod', element: <SetupNewPassword /> },
+        { path: '/setupNewPassword', element: <SetupNewPassword /> },
         { path: '/verifyAccount', element: <VerifyAccount /> },
         { path: '*', element: <Error /> },
     ];
