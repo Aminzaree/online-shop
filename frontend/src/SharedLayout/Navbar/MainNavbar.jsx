@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, Input } from "@nextui-org/react";
 import { ToastContainer, toast } from 'react-toastify';
 import { FaShoppingBasket, FaSearch } from "react-icons/fa";
@@ -9,30 +9,49 @@ import { LuUser2 } from "react-icons/lu";
 import onlineShop from "./../../assets/img/online-store.png"
 import Cookies from "js-cookie";
 import DarkModeToggle from "../../Components/Dark Mode Toggle/DarkModeToggle";
+import UserDropdown from "./UserDropdown";
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = ["خانه", "محصولات", "پرسش‌های متداول", "درباره ما", "تماس با ما"];
 
+    const [userToken, setUserToken] = useState(null)
+    const storedToken = Cookies.get("userToken");
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (storedToken) {
+            setUserToken(storedToken);
+        }
+    }, [storedToken])
+
+    const handleLogOut = () => {
+        Cookies.remove("userToken");
+        setUserToken(null);
+        navigate("/signIn");
+        toast.success("خروج با موفقیت انجام شد.")
+    }
+
     return (
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
             maxWidth="xl"
-            className="sm:py-7 rounded-b-3xl"
+            className="md:py-7"
         >
             {/* Navbar Image Logo */}
             <img
                 src={onlineShop}
                 alt="online shop"
                 width={80}
-                className="hidden sm:block pl-2"
+                className="hidden md:block pl-2"
             />
 
             {/* Navbar Main Container */}
             <div className="w-full flex flex-col">
                 {/* Top Items */}
-                <NavbarContent className="hidden sm:flex sm:pb-4">
+                <NavbarContent className="hidden md:flex md:pb-4">
                     <div className="md:w-8/12 xl:w-9/12">
                         <NavbarContent className="w-full">
                             <Input
@@ -50,14 +69,22 @@ export default function App() {
                     </div>
                     <div className="md:w-4/12 xl:w-3/12">
                         <NavbarContent className="w-full" justify="end">
-                            <Button
-                                color="default"
-                                variant="bordered"
-                                radius="sm"
-                            >
-                                <LuUser2 size={18} />
-                                <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
-                            </Button>
+
+                            {userToken ?
+                                <UserDropdown handleLogOut={handleLogOut} />
+                                :
+                                <Button
+                                    color="default"
+                                    variant="bordered"
+                                    radius="sm"
+                                >
+                                    <LuUser2 size={18} />
+                                    <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
+                                </Button>
+                            }
+
+
+
                             <Button
                                 isIconOnly
                                 color="default"
@@ -77,11 +104,11 @@ export default function App() {
                     <NavbarContent>
                         <NavbarMenuToggle
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                            className="sm:hidden"
+                            className="md:hidden"
                         />
                         <NavbarBrand>
                             <p className="font-lale text-xl font-bold text-inherit text-red-600">فروشگاه من</p>
-                            <NavbarContent className="hidden sm:flex gap-4 mr-4" justify="center">
+                            <NavbarContent className="hidden md:flex gap-4 mr-4" justify="center">
                                 <NavbarItem>
                                     <NavLink to='/' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
                                         خانه
@@ -90,11 +117,6 @@ export default function App() {
                                 <NavbarItem>
                                     <NavLink to='/product' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
                                         محصولات
-                                    </NavLink>
-                                </NavbarItem>
-                                <NavbarItem>
-                                    <NavLink to='/' className={({ isActive }) => (isActive ? "active link font-semibold" : "font-normal")}>
-                                        پرسش‌های متداول
                                     </NavLink>
                                 </NavbarItem>
                                 <NavbarItem>
@@ -116,7 +138,7 @@ export default function App() {
                         <Button
                             color="transparent"
                             radius="sm"
-                            className="px-0 hidden sm:flex"
+                            className="px-0 hidden md:flex"
                         >
                             <AiOutlineFileSearch size={20} />
                             پیگیری کالا
@@ -126,7 +148,7 @@ export default function App() {
                             color="default"
                             variant="bordered"
                             radius="sm"
-                            className="sm:hidden"
+                            className="md:hidden"
                         >
                             <LuUser2 size={18} />
                             <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
@@ -145,7 +167,7 @@ export default function App() {
                             }
                             className="w-full"
                             href="#"
-                            size="lg"
+                            size="md"
                         >
                             {item}
                         </li>

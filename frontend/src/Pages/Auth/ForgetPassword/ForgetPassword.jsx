@@ -72,6 +72,7 @@ export default function ForgetPassword() {
                                         type="email"
                                         label="لطفا ایمیل خود را وارد کنید"
                                         isClearable
+                                        isRequired
                                         {...register("email", {
                                             required: "لطفا ایمیل خود را وارد کنید."
                                         })}
