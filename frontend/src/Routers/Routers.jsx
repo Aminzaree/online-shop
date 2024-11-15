@@ -1,16 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignUp from './../Pages/Auth/SignUp/SignUp'
-import SignIn from './../Pages/Auth/SignIn/SignIn'
-import LayoutMain from './../SharedLayout/LayoutMain'
-import Home from './../Pages/Home/Home'
-import Product from './../Pages/Product/Product'
-import About from './../Pages/About/About'
+import SignUp from './../Pages/Auth/SignUp/SignUp';
+import SignIn from './../Pages/Auth/SignIn/SignIn';
+import LayoutMain from './../SharedLayout/LayoutMain';
+import Home from './../Pages/Home/Home';
+import Product from './../Pages/Product/Product';
+import About from './../Pages/About/About';
 import Error from "../Pages/Error/Error";
 import { ToastContainer } from "react-toastify";
 import ForgetPassword from "../Pages/Auth/ForgetPassword/ForgetPassword";
 import SetupNewPassword from "../Pages/Auth/SetupNewPassword/SetupNewPassword";
-import Contact from '../Pages/Contact/index'
+import Contact from '../Pages/Contact/index';
 import VerifyAccount from "../Pages/Auth/Verify/VerifyAccount";
+import Dashboard from "../UserPanel/Dashboard/Dashboard";
+import Account from "../UserPanel/Account/Account";
+import UserPanelLayout from "../UserPanel/Shared/UserPanelLayout";
 
 export default function Routers() {
 
@@ -30,6 +33,10 @@ export default function Routers() {
         { path: '/contact', element: <Contact /> },
     ];
 
+    const userPanelRoutes = [
+        { path: 'dashboard', element: <Dashboard /> }, // مسیر بدون '/'
+        { path: 'account', element: <Account /> }, // مسیر بدون '/'
+    ];
 
     return (
         <>
@@ -50,8 +57,9 @@ export default function Routers() {
                         })
                     }
 
-                    {/* مسیرهای با SharedLayout */}
+                    {/* مسیرهای با LayoutMain */}
                     <Route path="/" element={<LayoutMain />}>
+                        {/* مسیرهای مشترک */}
                         {
                             sharedLayoutRoutes.map((route, index) => {
                                 const { path, element } = route;
@@ -65,6 +73,22 @@ export default function Routers() {
                                 )
                             })
                         }
+
+                        {/* مسیرهای پنل کاربری */}
+                        <Route path="profile" element={<UserPanelLayout />}>
+                            {
+                                userPanelRoutes.map((route, index) => {
+                                    const { path, element } = route;
+                                    return (
+                                        <Route
+                                            key={index}
+                                            path={path}
+                                            element={element}
+                                        />
+                                    )
+                                })
+                            }
+                        </Route>
 
                     </Route>
                 </Routes>

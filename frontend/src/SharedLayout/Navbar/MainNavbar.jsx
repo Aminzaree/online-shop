@@ -69,7 +69,6 @@ export default function App() {
                     </div>
                     <div className="md:w-4/12 xl:w-3/12">
                         <NavbarContent className="w-full" justify="end">
-
                             {userToken ?
                                 <UserDropdown handleLogOut={handleLogOut} />
                                 :
@@ -82,9 +81,6 @@ export default function App() {
                                     <NavLink to="/signIn" className="flex" > ورود / عضویت</NavLink>
                                 </Button>
                             }
-
-
-
                             <Button
                                 isIconOnly
                                 color="default"
