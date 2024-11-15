@@ -3,6 +3,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineLogout } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export default function UserDropdown(props) {
 
@@ -30,7 +31,8 @@ export default function UserDropdown(props) {
                     key="settings"
                     startContent={<CgProfile   size={15} />}
                 >
-                    پروفایل
+                    <Link to="/profile/Account">پروفایل</Link>
+                    
                 </DropdownItem>
                 <DropdownItem
                     key="team_settings"

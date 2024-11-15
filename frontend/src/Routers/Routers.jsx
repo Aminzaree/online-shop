@@ -34,8 +34,8 @@ export default function Routers() {
     ];
 
     const userPanelRoutes = [
-        { path: 'dashboard', element: <Dashboard /> }, // مسیر بدون '/'
-        { path: 'account', element: <Account /> }, // مسیر بدون '/'
+        { path: 'dashboard', element: <Dashboard /> },
+        { path: 'account', element: <Account /> },
     ];
 
     return (
@@ -75,7 +75,7 @@ export default function Routers() {
                         }
 
                         {/* مسیرهای پنل کاربری */}
-                        <Route path="profile" element={<UserPanelLayout />}>
+                        <Route path="/profile" element={<UserPanelLayout />}>
                             {
                                 userPanelRoutes.map((route, index) => {
                                     const { path, element } = route;
