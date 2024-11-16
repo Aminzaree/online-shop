@@ -30,8 +30,9 @@ export default function UserDropdown(props) {
                 <DropdownItem
                     key="settings"
                     startContent={<CgProfile   size={15} />}
+                    className="w-full"
                 >
-                    <Link to="/profile/Account">پروفایل</Link>
+                    <Link className="w-full block" to="/profile/Account">پروفایل</Link>
                     
                 </DropdownItem>
                 <DropdownItem
@@ -45,7 +46,7 @@ export default function UserDropdown(props) {
                     showDivider
                     startContent={<RiLockPasswordLine  size={15} />}
                 >
-                    تغییر کلمه عبور
+                    <Link className="w-full block" to="/profile/changePassword">تغییر کلمه عبور</Link>
                 </DropdownItem>                              
                 <DropdownItem 
                     key="logout" 

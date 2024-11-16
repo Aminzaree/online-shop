@@ -14,6 +14,8 @@ import VerifyAccount from "../Pages/Auth/Verify/VerifyAccount";
 import Dashboard from "../UserPanel/Dashboard/Dashboard";
 import Account from "../UserPanel/Account/Account";
 import UserPanelLayout from "../UserPanel/Shared/UserPanelLayout";
+import ChangePassword from "../UserPanel/ChangePassword/ChangePassword";
+import Orders from "../UserPanel/Orders/Orders";
 
 export default function Routers() {
 
@@ -34,8 +36,9 @@ export default function Routers() {
     ];
 
     const userPanelRoutes = [
-        { path: 'dashboard', element: <Dashboard /> },
         { path: 'account', element: <Account /> },
+        { path: 'changePassword', element: <ChangePassword /> },
+        { path: 'orders', element: <Orders /> },
     ];
 
     return (
