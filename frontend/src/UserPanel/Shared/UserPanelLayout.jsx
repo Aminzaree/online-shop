@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import IdentityVerification from "./IdentityVerification/IdentityVerification";
 import UserPanelSidebar from "./UserPanelSidebar/UserPanelSidebar";
-import BreadcrumbComponent from "../../Components/Bread Crumbs Component/BreadcrumbsComponent";
+import BreadcrumbComponent from "../../Components/Breadcrumbs Component/BreadcrumbsComponent";
 
 export default function UserPanelLayout() {
     return (

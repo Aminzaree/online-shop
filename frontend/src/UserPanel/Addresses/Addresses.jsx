@@ -1,12 +1,15 @@
-import { Button, image, user, Dropdown, Link, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { Button, image, user, Dropdown, Link, DropdownTrigger, DropdownMenu, DropdownItem, useDisclosure } from "@nextui-org/react";
 import { MdAlternateEmail, MdDelete, MdOutlineAddLocationAlt, MdOutlineLocalPhone } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { IoAppsOutline } from "react-icons/io5";
 import imageMap from "../../assets/img/map.png"
 import { AiOutlineUser } from "react-icons/ai";
 import { SlLocationPin } from "react-icons/sl";
+import AddNewAddress from "./AddNewAddress";
 
 export default function Addresses() {
+
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const addressesObject = [
         {
@@ -49,6 +52,7 @@ export default function Addresses() {
                     startContent={
                         <MdOutlineAddLocationAlt size={20} />
                     }
+                    onClick={onOpen}
                 >ثبت آدرس جدید</Button>
             </div>
 
@@ -111,6 +115,8 @@ export default function Addresses() {
                     })
                 }
             </div>
+
+            <AddNewAddress isOpen={isOpen} onOpenChange={onOpenChange} />
         </div>
     );
 };

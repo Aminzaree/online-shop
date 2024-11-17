@@ -7,8 +7,10 @@ export default function BreadcrumbComponent() {
 
     const translations = {
         profile: "پروفایل",
+        account: "حساب کاربری",
         addresses: "آدرس‌ها",
         orders: "سفارش‌ها",
+        changePassword: "تغییر کلمه عبور",
     };
 
     return (
