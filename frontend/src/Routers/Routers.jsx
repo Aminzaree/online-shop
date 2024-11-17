@@ -16,6 +16,7 @@ import Account from "../UserPanel/Account/Account";
 import UserPanelLayout from "../UserPanel/Shared/UserPanelLayout";
 import ChangePassword from "../UserPanel/ChangePassword/ChangePassword";
 import Orders from "../UserPanel/Orders/Orders";
+import Addresses from "../UserPanel/Addresses/Addresses";
 
 export default function Routers() {
 
@@ -37,6 +38,7 @@ export default function Routers() {
 
     const userPanelRoutes = [
         { path: 'account', element: <Account /> },
+        { path: 'addresses', element: <Addresses /> },
         { path: 'changePassword', element: <ChangePassword /> },
         { path: 'orders', element: <Orders /> },
     ];
