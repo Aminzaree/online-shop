@@ -1,8 +1,7 @@
-import { Button, image, user } from "@nextui-org/react";
-import { Dropdown, Link, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { Button, image, user, Dropdown, Link, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { MdAlternateEmail, MdDelete, MdOutlineAddLocationAlt, MdOutlineLocalPhone } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { IoAppsOutline } from "react-icons/io5";
-import { MdAlternateEmail, MdDelete, MdOutlineAddLocationAlt, MdOutlineLocalPhone } from "react-icons/md";
 import imageMap from "../../assets/img/map.png"
 import { AiOutlineUser } from "react-icons/ai";
 import { SlLocationPin } from "react-icons/sl";
