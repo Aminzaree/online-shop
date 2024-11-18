@@ -34,7 +34,7 @@ export default function UserPanelSidebar() {
                         { to: "myBag", icon: <TbMoneybag className="me-1" />, label: "کیف پول" },
                         { to: "addresses", icon: <SlLocationPin className="me-1" />, label: "آدرس‌ها" },
                         { to: "orders", icon: <TbShoppingCart className="me-1" />, label: "سفارش‌ها" },
-                        { to: "myFavorites", icon: <MdFavoriteBorder className="me-1" />, label: "علاقه‌مندی‌های من" },
+                        { to: "favorite", icon: <MdFavoriteBorder className="me-1" />, label: "علاقه‌مندی‌های من" },
                         { to: "messages", icon: <IoNotificationsOutline className="me-1" />, label: "پیغام‌ها" },
                         { to: "settings", icon: <IoSettingsOutline className="me-1" />, label: "تنظیمات" },
                         { to: "changePassword", icon: <RiLockPasswordLine className="me-1" />, label: "تغییر کلمه عبور" },

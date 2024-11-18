@@ -10,6 +10,7 @@ export default function BreadcrumbComponent() {
         account: "حساب کاربری",
         addresses: "آدرس‌ها",
         orders: "سفارش‌ها",
+        favorite: "علاقه‌مندی‌ها",
         changePassword: "تغییر کلمه عبور",
     };
 
