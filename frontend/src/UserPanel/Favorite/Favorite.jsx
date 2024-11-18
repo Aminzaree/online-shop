@@ -22,6 +22,27 @@ export default function Favorite() {
         {
             id: 3,
             label: "گوشی موبایل iphone 16 pro",
+            inventory: true,
+            price: "۴۰,۱۹۹,۰۰۰",
+            image: "https://nextui.org/images/hero-card-complete.jpeg"
+        },
+        {
+            id: 4,
+            label: "گوشی موبایل iphone 16 pro",
+            inventory: false,
+            price: "۴۰,۱۹۹,۰۰۰",
+            image: "https://nextui.org/images/hero-card-complete.jpeg"
+        },
+        {
+            id: 5,
+            label: "گوشی موبایل iphone 16 pro",
+            inventory: true,
+            price: "۴۰,۱۹۹,۰۰۰",
+            image: "https://nextui.org/images/hero-card-complete.jpeg"
+        }, 
+        {
+            id: 6,
+            label: "گوشی موبایل iphone 16 pro",
             inventory: false,
             price: "۴۰,۱۹۹,۰۰۰",
             image: "https://nextui.org/images/hero-card-complete.jpeg"
@@ -31,7 +52,7 @@ export default function Favorite() {
 
     return (
         <div className="w-full">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 {
                     favoriteList.map((item, index) => {
@@ -53,7 +74,7 @@ export default function Favorite() {
                                 </CardHeader>
                                 <CardBody className="overflow-visible text-start py-2 px-4">
                                     <p className="pt-1">{label}</p>
-                                    <small className={`flex items-center text-default-500 pt-2 ${inventory ? "text-default-400" : "text-danger-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
+                                    <small className={`flex items-center text-default-500 pt-2 ${inventory ? "text-default-400" : "text-red-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
                                     <h4 className="font-bold text-large text-end">{price} تومان</h4>
                                 </CardBody>
                                 <CardFooter>
