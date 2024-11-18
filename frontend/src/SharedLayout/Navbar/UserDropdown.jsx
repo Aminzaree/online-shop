@@ -32,7 +32,7 @@ export default function UserDropdown(props) {
                     startContent={<CgProfile   size={15} />}
                     className="w-full"
                 >
-                    <Link className="w-full block" to="/profile/Account">پروفایل</Link>
+                    <Link className="w-full block" to="/profile/account">پروفایل</Link>
                     
                 </DropdownItem>
                 <DropdownItem

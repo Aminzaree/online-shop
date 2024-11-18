@@ -1,5 +1,5 @@
 import CustomModal from "../../Components/Modal/customModal";
-import { ModalHeader, ModalBody, ModalFooter, Button, Input } from "@nextui-org/react";
+import { ModalHeader, ModalBody, ModalFooter, Button, Input, Textarea } from "@nextui-org/react";
 import { useDisclosure, Select, SelectItem } from "@nextui-org/react";
 
 export default function AddNewAddress(props) {
@@ -14,8 +14,9 @@ export default function AddNewAddress(props) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <Select
                             label="استان"
-                            color="primary"
+                            color="default"
                             className="flex justify-center"
+                            isRequired
                         >
                             <SelectItem key="tehran">
                                 تهران
@@ -23,8 +24,9 @@ export default function AddNewAddress(props) {
                         </Select>
                         <Select
                             label="شهر"
-                            color="primary"
+                            color="default"
                             className="flex justify-center"
+                            isRequired
                         >
                             <SelectItem key="tehran">
                                 تهران
@@ -34,8 +36,9 @@ export default function AddNewAddress(props) {
                     <div className="w-full mt-4">
                         <Select
                             label="محله"
-                            color="primary"
+                            color="default"
                             className="flex justify-center"
+                            isRequired
                         >
                             <SelectItem key="tehran">
                                 تجریش
@@ -46,48 +49,53 @@ export default function AddNewAddress(props) {
                         <label htmlFor="number">
                             <Input
                                 size={"md"}
-                                variant={"bordered"}
                                 type="text"
                                 name="number"
                                 label="پلاک"
                                 isClearable
                                 isRequired
-                                color="primary"
+                                color="default"
                                 className="mt-4"
                             />
                         </label>
                         <label htmlFor="number">
                             <Input
                                 size={"md"}
-                                variant={"bordered"}
                                 type="text"
                                 name="number"
-                                label="واحد" 
+                                label="واحد"
                                 isClearable
                                 isRequired
-                                color="primary"
+                                color="default"
                                 className="mt-4"
                             />
                         </label>
                         <label htmlFor="zipCode">
                             <Input
                                 size={"md"}
-                                variant={"bordered"}
                                 type="text"
                                 name="zipCode"
                                 label="کد پستی"
                                 isClearable
                                 isRequired
-                                color="primary"
+                                color="default"
                                 className="mt-4"
                             />
                         </label>
+                    </div>
+                    <div className="w-full mt-4">
+                        <Textarea
+                            label="نشانی پستی"
+                            placeholder="نشانی پستی خود را وارد کنید."
+                            color="default"
+                            isRequired
+                        />
                     </div>
                 </form>
             </ModalBody>
             <ModalFooter>
                 <Button color="danger" variant="light" onPress={() => onOpenChange(false)}>
-                  بستن
+                    بستن
                 </Button>
                 <Button color="primary">
                     ثبت
