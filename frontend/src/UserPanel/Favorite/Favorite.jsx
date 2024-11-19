@@ -49,16 +49,12 @@ export default function Favorite() {
         },
     ]
 
-
     return (
         <div className="w-full">
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-
                 {
                     favoriteList.map((item, index) => {
-
                         const { id, label, inventory, price, image } = item;
-
                         return (
                             <Card
                                 key={id}
@@ -74,7 +70,7 @@ export default function Favorite() {
                                 </CardHeader>
                                 <CardBody className="overflow-visible text-start py-2 px-4">
                                     <p className="pt-1">{label}</p>
-                                    <small className={`flex items-center text-default-500 pt-2 ${inventory ? "text-default-400" : "text-red-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
+                                    <small className={`flex items-center pt-2 ${inventory ? "text-default-400" : "text-red-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
                                     <h4 className="font-bold text-large text-end">{price} تومان</h4>
                                 </CardBody>
                                 <CardFooter>
@@ -97,11 +93,8 @@ export default function Favorite() {
                                 </CardFooter>
                             </Card>
                         )
-
                     })
                 }
-
-
             </div>
         </div>
     );

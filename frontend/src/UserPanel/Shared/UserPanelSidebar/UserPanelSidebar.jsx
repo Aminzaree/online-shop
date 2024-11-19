@@ -19,7 +19,7 @@ export default function UserPanelSidebar() {
                     <User
                         name="کاربر فروشگاه"
                         description={(
-                            <Link href="javascript:void(0)" size="sm">
+                            <Link href="#" size="sm">
                                 karbar_froshgah@
                             </Link>
                         )}
