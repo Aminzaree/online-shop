@@ -1,7 +1,7 @@
-import { Button, Input } from "@nextui-org/react";
+import { Avatar, Button, Input } from "@nextui-org/react";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BiRename } from "react-icons/bi";
-import { CiCalendarDate, CiMobile3 } from "react-icons/ci";
+import { CiCalendarDate, CiEdit, CiMobile3 } from "react-icons/ci";
 import { FaUser, FaUserFriends } from "react-icons/fa";
 import { LuUserCheck2 } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -10,7 +10,24 @@ import { RiLockPasswordLine, RiUserLine } from "react-icons/ri";
 export default function Account() {
     return (
         <div className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="w-full relative">
+                <Avatar
+                    isBordered
+                    color="primary"
+                    src="https://i.pravatar.cc/150?u=a04258a2462d826712d"
+                    className="w-24 h-24 text-large"
+                />
+                <Button 
+                    isIconOnly 
+                    color="warning" 
+                    variant="solid" 
+                    size="sm"
+                    className="absolute -bottom-1 right-16"
+                >
+                    <CiEdit size={25} />
+                </Button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                 <label htmlFor="firstName">
                     <Input
                         size={"md"}
