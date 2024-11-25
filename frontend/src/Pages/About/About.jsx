@@ -1,5 +1,5 @@
 export default function Index () {
     return (
-        <>About Page</>
+        <div className="h-screen">About Page</div>
     );
 };

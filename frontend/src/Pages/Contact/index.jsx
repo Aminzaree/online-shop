@@ -8,8 +8,8 @@ import { Button } from "@nextui-org/react";
 
 export default function Index() {
     return (
-        <div className="w-full h-screen flex justify-center items-center mx-auto px-6 md:px-0" >
-            <div className="w-full lg:flex md:w-8/12 lg:w-10/12 xl:w-9/12 mx-auto text-center py-20 px-12 bg-white dark:bg-[#18181B] rounded-3xl">
+        <div className="w-full flex justify-center items-center mx-auto px-6 md:px-0" >
+            <div className="w-full lg:flex text-center py-20 px-12 bg-white dark:bg-[#18181B] rounded-3xl">
                 <div className="w-full px-9">
                     <div className="w-full flex justify-start border-b-2 border-solid border-zinc-200 pb-6 mb-6">
                         <IoLocationOutline className="ml-1" size={35} />

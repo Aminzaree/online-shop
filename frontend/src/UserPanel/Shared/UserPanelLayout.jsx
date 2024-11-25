@@ -5,7 +5,7 @@ import BreadcrumbComponent from "../../Components/Breadcrumbs Component/Breadcru
 
 export default function UserPanelLayout() {
     return (
-        <div className="flex flex-col lg:flex-row w-full xl:w-10/12 xxl:w-9/12 mx-auto min-h-screen p-6">
+        <div className="flex flex-col lg:flex-row w-full mx-auto min-h-screen">
 
             {/* Sidebar */}
             <UserPanelSidebar />

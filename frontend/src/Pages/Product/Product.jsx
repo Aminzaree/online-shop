@@ -1,6 +1,6 @@
 export default function Index () {
     return (
-        <div>
+        <div className="h-screen">
             Product page
         </div>
     );
