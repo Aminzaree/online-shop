@@ -7,6 +7,8 @@ export default function BreadcrumbComponent() {
 
     const translations = {
         product: "محصولات",
+        about: "درباره ما",
+        contact: "تماس با ما",
         profile: "پروفایل",
         account: "حساب کاربری",
         addresses: "آدرس‌ها",

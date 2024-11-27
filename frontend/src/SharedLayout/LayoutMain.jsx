@@ -11,8 +11,13 @@ export default function Index() {
 
             {/* Main Content */}
             <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-4 py-8">
+
+                {/* Breadcrumb Component */}
                 <BreadcrumbComponent />
+
+                {/* Main Content */}
                 <Outlet />
+                
             </div>
 
             {/* Footer */}

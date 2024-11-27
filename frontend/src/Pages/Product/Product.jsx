@@ -8,7 +8,7 @@ export default function Index() {
 
     return (
         <div className="w-full">
-            <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-6 pt-2 pb-10">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2 pb-10">
                 {
                     ProductList.map((item, index) => {
                         const { id, label, inventory, price, image } = item;
@@ -28,7 +28,7 @@ export default function Index() {
                                 <CardBody className="overflow-visible text-start py-2 px-4">
                                     <h6 className="pt-1">{label}</h6>
                                     <small className={`flex items-center py-3 ${inventory ? "text-default-400" : "text-red-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
-                                    <h5 className="font-semibold text-large text-end">{price} تومان</h5>
+                                    <h5 className="font-semibold text-large text-end">{price} <span className="text-xs text-default-500">تومان</span></h5>
                                 </CardBody>
                                 <CardFooter>
                                     <Button
