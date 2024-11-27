@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar/MainNavbar";
 import Footer from "./Footer/Footer";
+import BreadcrumbComponent from "../Components/Breadcrumbs Component/BreadcrumbsComponent";
 
 export default function Index() {
     return (
@@ -10,6 +11,7 @@ export default function Index() {
 
             {/* Main Content */}
             <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-4 py-8">
+                <BreadcrumbComponent />
                 <Outlet />
             </div>
 

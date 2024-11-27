@@ -6,6 +6,7 @@ export default function BreadcrumbComponent() {
     const pathnames = location.pathname.split("/").filter((x) => x);
 
     const translations = {
+        product: "محصولات",
         profile: "پروفایل",
         account: "حساب کاربری",
         addresses: "آدرس‌ها",

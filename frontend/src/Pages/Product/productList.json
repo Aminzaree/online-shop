@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "label": "گوشی موبایل iphone 16",
+        "inventory": true,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 2,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": false,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 3,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": true,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 4,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": false,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 5,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": true,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 6,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": false,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 7,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": false,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    },
+    {
+        "id": 8,
+        "label": "گوشی موبایل iphone 16 pro",
+        "inventory": false,
+        "price": "۴۰,۱۹۹,۰۰۰",
+        "image": "https://nextui.org/images/hero-card-complete.jpeg"
+    }
+]

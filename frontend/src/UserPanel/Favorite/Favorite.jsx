@@ -71,7 +71,7 @@ export default function Favorite() {
                                 <CardBody className="overflow-visible text-start py-2 px-4">
                                     <p className="pt-1">{label}</p>
                                     <small className={`flex items-center pt-2 ${inventory ? "text-default-400" : "text-red-600"}`}><TbBuildingWarehouse className="me-1" />{inventory ? "موجود در انبار" : "ناموجود در انبار"}</small>
-                                    <h4 className="font-bold text-large text-end">{price} تومان</h4>
+                                    <h4 className="font-semibold text-large text-end">{price} تومان</h4>
                                 </CardBody>
                                 <CardFooter>
                                     <Button
